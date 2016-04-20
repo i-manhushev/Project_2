@@ -2,7 +2,8 @@ var gulp = require('gulp'),
 		less = require('gulp-less'),
 		autoprefixer = require('gulp-autoprefixer'),
 		cleanCSS = require('gulp-clean-css'),
-		browserSync = require('browser-sync').create()
+		browserSync = require('browser-sync').create(),
+		plumber = require('gulp-plumber');
 
 var config = {
 	path:{
@@ -10,13 +11,14 @@ var config = {
 		styles: './app/styles/main.less'
 	},
 	src: './app',
-	dist: './dist'
+	dist: './dist',
 };
 
 // CSS LESS task
 gulp.task('css', function(){
 return gulp
 		.src(config.path.styles)
+		.pipe(plumber())
 		.pipe(less())
 		.pipe(autoprefixer({
 				browsers: ['last 15 versions'],
