@@ -1,33 +1,38 @@
 var gulp = require('gulp'),
+    plumber = require('gulp-plumber'),
+    gulpif = require('gulp-if'),
 		less = require('gulp-less'),
 		autoprefixer = require('gulp-autoprefixer'),
 		cleanCSS = require('gulp-clean-css'),
 		browserSync = require('browser-sync').create(),
-		plumber = require('gulp-plumber'),
-		imagemin = require('gulp-imagemin');
+		imagemin = require('gulp-imagemin'),
+		useref = require('gulp-useref'),
+		uglify = require('gulp-uglify');
+
+// Pathes to my files and assets
 
 var config = {
 	path:{
 		index: './app/index.html',
 		styles: './app/styles/main.less',
+		scripts: './app/js/**/*.js',
 		images: './app/images/**/*.+(png|jpg|gif|svg)'
 	},
 	src: './app',
 	dist: './dist',
 };
 
-//browserSync task to start the server
+//browserSync  to start the server
 
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
       baseDir: config.src
     },
-  })
+  });
 });
 
-
-// CSS LESS task
+// CSS task
 
 gulp.task('css', function(){
 return gulp
@@ -39,22 +44,21 @@ return gulp
 				cascade: false
 		}))
 		.pipe(gulp.dest(config.src + '/styles'))
-		.pipe(cleanCSS())
-		.pipe(gulp.dest(config.dist + '/styles'))
 		.pipe(browserSync.reload({
       stream: true
-    }))
+    }));
 });
 
-// HTML task
-
-gulp.task('html', function(){
-	return gulp
-			.src(config.path.index)
-			.pipe(gulp.dest(config.dist))
-			.pipe(browserSync.reload({
+ // USEREF task
+ gulp.task('html', function () {
+    return gulp.src('app/*.html')
+        .pipe(useref())
+        .pipe(gulpif('*.js', uglify()))
+        .pipe(gulpif('*.css', cleanCSS()))
+        .pipe(gulp.dest('dist'))
+        .pipe(browserSync.reload({
       stream: true
-    }))
+    }));
 });
 
 //image minification
@@ -63,19 +67,21 @@ gulp.task('images', function(){
   return gulp
   .src(config.path.images)
   .pipe(imagemin())
-  .pipe(gulp.dest(config.dist + '/images'))
+  .pipe(gulp.dest(config.dist + '/images'));
 });
 
 
-// watch for changes and reload
+// Watch for changes and reload
 
 gulp.task('watch',['browserSync','css','html','images'], function(){
 	gulp.watch(config.path.styles, ['css']);
-	gulp.watch(config.path.index, ['html']);
+	gulp.watch([config.path.styles, config.path.scripts, config.path.index], ['html']);
 	gulp.watch(config.path.images, ['images']);
+
 });
 
-// gulp default to run like just GULP from the terminal
+// DEFUALT!
+
 gulp.task('default',['watch']);
 
 
