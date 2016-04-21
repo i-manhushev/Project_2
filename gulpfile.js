@@ -44,13 +44,13 @@ return gulp
 				cascade: false
 		}))
 		.pipe(gulp.dest(config.src + '/styles'))
-		.pipe(browserSync.reload({
+		/*.pipe(browserSync.reload({
       stream: true
-    }));
+    }));*/
 });
 
  // USEREF task
- gulp.task('html', function () {
+ gulp.task('html',['css'], function () {
     return gulp.src('app/*.html')
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
@@ -67,20 +67,23 @@ gulp.task('images', function(){
   return gulp
   .src(config.path.images)
   .pipe(imagemin())
-  .pipe(gulp.dest(config.dist + '/images'));
+  .pipe(gulp.dest(config.dist + '/images'))
+  .pipe(browserSync.reload({
+      stream: true
+    }));
 });
 
 
 // Watch for changes and reload
 
 gulp.task('watch',['browserSync','css','html','images'], function(){
-	gulp.watch(config.path.styles, ['css']);
+	//gulp.watch(config.path.styles, ['css']);
 	gulp.watch([config.path.styles, config.path.scripts, config.path.index], ['html']);
 	gulp.watch(config.path.images, ['images']);
 
 });
 
-// DEFUALT!
+// DEFAULT!
 
 gulp.task('default',['watch']);
 
