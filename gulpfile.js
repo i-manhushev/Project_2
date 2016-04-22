@@ -6,8 +6,11 @@ var gulp = require('gulp'),
 		cleanCSS = require('gulp-clean-css'),
 		browserSync = require('browser-sync').create(),
 		imagemin = require('gulp-imagemin'),
+		cache = require('gulp-cache'),
 		useref = require('gulp-useref'),
-		uglify = require('gulp-uglify');
+		uglify = require('gulp-uglify'),
+		del = require('del'),
+		runSequence = require('run-sequence');
 
 // Pathes to my files and assets
 
@@ -66,12 +69,20 @@ return gulp
 gulp.task('images', function(){
   return gulp
   .src(config.path.images)
-  .pipe(imagemin())
+  .pipe(cache(imagemin({
+      interlaced: true
+    })))
   .pipe(gulp.dest(config.dist + '/images'))
   .pipe(browserSync.reload({
       stream: true
     }));
 });
+
+//deleting dist folder before
+
+gulp.task('clean:dist', function() {
+  return del.sync('dist');
+})
 
 
 // Watch for changes and reload
@@ -85,7 +96,11 @@ gulp.task('watch',['browserSync','css','html','images'], function(){
 
 // DEFAULT!
 
-gulp.task('default',['watch']);
+//gulp.task('default',['watch']);
+
+gulp.task('default', function(callback) {
+  runSequence('clean:dist', ['watch'], callback);
+});
 
 
 
