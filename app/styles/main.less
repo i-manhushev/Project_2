@@ -117,15 +117,15 @@ header{
 				}
 				.left();
 				a{
-				display: block;
-				padding: 5px 10px;
-				font: 16px/18px 'Titillium Web', arial, sans-serif;
-				color: @textMainColor;
-				text-transform: uppercase;
-				}
-				&:hover{
-					background-color: #643a79;
-					border-radius: 4px;
+					display: block;
+					padding: 5px 10px;
+					font: 16px/18px 'Titillium Web', arial, sans-serif;
+					color: @textMainColor;
+					text-transform: uppercase;
+					&:hover{
+						background-color: #643a79;
+						border-radius: 4px;
+					}
 				}
 			}
 		}
@@ -176,10 +176,10 @@ header{
 		.s__item{
 			margin-right: 8%/3;
 			.left();
-			width: 23%;
-			padding: 0 30px;
+				width: 23%;
+				padding: 0 30px;
 			&:last-child{
-			margin-right: 0;	
+				margin-right: 0;	
 			}
 			&__title{
 				font: 18px/18px 'Titillium Web', arial, sans-serif;
@@ -215,13 +215,13 @@ header{
 		.t__item{
 			margin-right: 8%/3;
 			.left();
-			width: 23%;
-			padding: 0 30px;
+				width: 23%;
+				padding: 0 30px;
 			&:last-child{
-			margin-right: 0;	
+				margin-right: 0;	
 			}
 			&__pic{
-				background: #878787; 
+				background: #878787; // add url with pic and position
 				width:200px;
 				height:200px;
 				border-radius: 50%;
@@ -271,9 +271,78 @@ header{
 	}
 }
 
+/*Skills Block*/
 
+#skills{
+	background-color: #fff;
+	.paddingSection();
+	.text-align();
+	.title{
+		.titles();
+		&:after{
+			.titleUnderline();
+		} 
+	}
+	.descr{
+		.descrs();
+	}
+	.skills__wrap{
+		padding-top: 70px;
+		.sk__item{
+			outline: 1px solid red;
+			margin-right: 8%/3;
+			.left();
+				width: 23%;
+				padding: 0 30px;
+			&:last-child{
+				margin-right: 0;	
+			}
+			&__title{
+				font: 700 18px/18px 'Titillium Web', arial, sans-serif;
+				text-transform: uppercase;
+				margin-top: 60px;
+			}			
+		}	
+	}
 
+}
 
+/*Portfolio block*/
+#portfolio{
+	background-color: #fd9;
+	.paddingSection();
+	.text-align();
+	.title{
+		.titles();
+		&:after{
+			.titleUnderline();
+		} 
+	}
+	.portfolio__nav{
+		display: inline-block; // think how to center with nav remaining block;
+		margin: 40px auto 0; // center the navigation
+		li{
+			margin-right:10px;
+			&:last-child{
+				margin-right:0;
+			}
+			.left();
+			a{
+				display: block;
+				background-color: rgba(0,0,0,0.08);
+				padding: 5px 10px;
+				font: 16px/18px 'Titillium Web', arial, sans-serif;
+				color: #000;
+				text-transform: uppercase;
+				border-radius: 4px;
+				&:hover{
+				background-color: #fff;
+				}
+			}	
+		}
+	}
+
+}	
 
 
 

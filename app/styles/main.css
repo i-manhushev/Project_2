@@ -208,7 +208,7 @@ header .nav li a {
   color: #fff;
   text-transform: uppercase;
 }
-header .nav li:hover {
+header .nav li a:hover {
   background-color: #643a79;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -368,4 +368,91 @@ header .nav li:hover {
 }
 #team .team__wrap .t__item__social .team-mail {
   background-position: -120px 0;
+}
+/*Skills Block*/
+#skills {
+  background-color: #fff;
+  padding: 120px 0;
+  text-align: center;
+}
+#skills .title {
+  font: 700 40px/40px 'Titillium Web', arial, sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+#skills .title:after {
+  margin: 0 auto;
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+#skills .descr {
+  font: 300 18px/26px 'Titillium Web', arial, sans-serif;
+}
+#skills .skills__wrap {
+  padding-top: 70px;
+}
+#skills .skills__wrap .sk__item {
+  outline: 1px solid red;
+  margin-right: 2.66666667%;
+  float: left;
+  width: 23%;
+  padding: 0 30px;
+}
+#skills .skills__wrap .sk__item:last-child {
+  margin-right: 0;
+}
+#skills .skills__wrap .sk__item__title {
+  font: 700 18px/18px 'Titillium Web', arial, sans-serif;
+  text-transform: uppercase;
+  margin-top: 60px;
+}
+/*Portfolio block*/
+#portfolio {
+  background-color: #fd9;
+  padding: 120px 0;
+  text-align: center;
+}
+#portfolio .title {
+  font: 700 40px/40px 'Titillium Web', arial, sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+#portfolio .title:after {
+  margin: 0 auto;
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+#portfolio .portfolio__nav {
+  display: inline-block;
+  margin: 40px auto 0;
+}
+#portfolio .portfolio__nav li {
+  margin-right: 10px;
+  float: left;
+}
+#portfolio .portfolio__nav li:last-child {
+  margin-right: 0;
+}
+#portfolio .portfolio__nav li a {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.08);
+  padding: 5px 10px;
+  font: 16px/18px 'Titillium Web', arial, sans-serif;
+  color: #000;
+  text-transform: uppercase;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+#portfolio .portfolio__nav li a:hover {
+  background-color: #fff;
 }
