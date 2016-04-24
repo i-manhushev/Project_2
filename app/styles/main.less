@@ -58,16 +58,18 @@ a, a:hover{text-decoration: none;}
 								/*Variables*/
 
 @textMainColor: #fff;
-@paddingContainerMarginItems: 20px;
-@wrapped4ItemsWidth: 260px;
-@wrapped2ItemsWidth: 540px;
+@containerWidth:1140px;
+@paddingContainerMarginItems: percentage(20/1140);
+@wrapped4ItemsWidth: percentage(260/1140);
+@wrapped2ItemsWidth: percentage(540/1140);
+@inputsWidth: percentage(860/1140);
 
 								/*MIXINS TO USE*/
 
 .left {float:left;}
 .right {float:right;}
 .container{
-	width: 1140px;
+	width: @containerWidth;
 	margin: 0 auto;
 	padding:0 @paddingContainerMarginItems;
 }
@@ -95,7 +97,7 @@ a, a:hover{text-decoration: none;}
 }
 .descrs{
 	font: 300 18px/26px 'Titillium Web', arial, sans-serif;
-	
+	margin-bottom: 70px;
 }
 
 
@@ -176,7 +178,6 @@ header{
 		.descrs();
 	}
 	.services__wrap{
-		padding-top: 70px;
 		.s__item{
 			margin-right: @paddingContainerMarginItems;
 			.left();
@@ -214,7 +215,6 @@ header{
 		.descrs();
 	}
 	.team__wrap{
-		padding-top: 70px;
 		.t__item{
 			margin-right: @paddingContainerMarginItems;
 			.left();
@@ -224,10 +224,15 @@ header{
 				margin-right: 0;	
 			}
 			&__pic{
-				background: #878787; // add url with pic and position
-				width:200px;
-				height:200px;
+				background: #878787; 
+				width: 100%;
+				height:189px; // adjust to media size
 				border-radius: 50%;
+				overflow: hidden;
+				img{
+					width:100%;
+					height:100%;
+				}
 			}
 			&__title{
 				font: 700 18px/18px 'Titillium Web', arial, sans-serif;
@@ -251,7 +256,7 @@ header{
 					height: 40px;
 					background: #bdd1df url(../images/social-icon.png);
 					border-radius: 50%;
-					margin-right:5px;
+					margin-right:3px;
 					&:last-child{
 						margin-right:0;
 					}
@@ -293,7 +298,6 @@ header{
 		.descrs();
 	}
 	.skills__wrap{
-		padding-top: 70px;
 		.sk__item{
 			outline: 1px solid red;
 			margin-right: @paddingContainerMarginItems;
@@ -327,10 +331,11 @@ header{
 	}
 	.descr{
 		.descrs();
+		margin-bottom: 40px;
 	}	
 	.portfolio__nav{
 		display: inline-block; // think how to center with nav remaining block;
-		margin: 40px auto 0; // center the navigation
+		margin: 0 auto 70px; // center the navigation
 		li{
 			.left();			
 			margin-right:10px;
@@ -352,11 +357,16 @@ header{
 		}
 	}
 	.portfolio__wrap{
-		padding-top: 60px;
 		.p__item{
 			.left();
 			margin-bottom: 60px;			
 			width: @wrapped2ItemsWidth;
+			img{
+				width:100%;
+			}
+			a:hover{
+				opacity:0.6;
+			}
 			&:nth-child(odd){
 				margin-right: @paddingContainerMarginItems;
 			}
@@ -395,7 +405,6 @@ header{
 		.descrs();
 	}	
 	.about__wrap{
-		padding-top: 70px;
 		.a__item{
 			.left();		
 			width: @wrapped2ItemsWidth;
@@ -415,7 +424,8 @@ header{
 				overflow:hidden;
 				img{				
 					height:100%;
-					line-height:100px;
+					width:100%;
+					line-height:100px; // adjust to media
 				}
 			}
 			&__text{
@@ -437,8 +447,94 @@ header{
 			}
 		}
 	}
-
 }	
+
+			/*Contacts block*/
+#contacts{
+	background-color: #3c5499;
+	color:@textMainColor;
+	.paddingSection();
+	.text-align();
+	.title{
+		.titles();
+		&:after{
+			.titleUnderline();
+		} 
+	}
+	.descr{
+		.descrs();
+	}	
+	.contacts__button{
+		border:none;
+		background-color: #30bae7;
+		padding: 25px 80px;
+		margin-top: 60px;
+		color: #fff;
+		font: 18px/26px 'Titillium Web', arial, sans-serif;
+		text-transform: uppercase;
+		cursor: pointer;
+		display: inline-block;
+		border-radius: 4px;
+		box-shadow: inset 0px -4px rgba(0,0,0,0.15);
+	}	
+	.inputsInfo,.inputsMessage{
+		width: @inputsWidth;
+		margin: 0 auto;
+	}
+	.inputsInfo{
+		margin-bottom: 25px;
+		input{
+			float:left;
+			width:48%;
+			height:60px;
+			margin-right: 4%;
+			padding:20px;
+			border: none;
+			background-color: #273a71;
+			border-radius: 4px;
+			color: @textMainColor;
+			&:nth-child(2){
+				margin-right: 0;
+			}
+			&[placeholder]{
+				font: 400 18px 'Titillium Web', arial, sans-serif;	
+			}
+		}
+	}
+	.inputsMessage{	
+		textarea{
+			background-color: #273a71;
+			width:100%;
+			height:200px;
+			padding:20px;
+			border:none;
+			border-radius: 4px;
+			color:@textMainColor;
+			&[placeholder]{
+				font: 400 18px/18px 'Titillium Web', arial, sans-serif;	
+			}
+		}
+	}	
+}	
+
+								/*Footer*/
+#footer{
+	padding:40px;
+	background-color: #c7d6d6;
+	text-align: center;
+	a{
+		margin-right:60px;
+		color: #273a71;
+		font: 600 24px/30px 'Titillium Web', arial, sans-serif;
+		
+		&:hover{
+			color: #30bae9;
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
 
 
 

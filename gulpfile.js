@@ -19,7 +19,7 @@ var config = {
 		index: './app/index.html',
 		styles: './app/styles/main.less',
 		scripts: './app/js/**/*.js',
-		images: './app/images/**/*.+(png|jpg|gif|svg)'
+		images: 'app/images/**/*.+(png|jpg|gif|svg)' //without DOT for watcher to work
 	},
 	src: './app',
 	dist: './dist',
@@ -69,9 +69,10 @@ return gulp
 gulp.task('images', function(){
   return gulp
   .src(config.path.images)
-  .pipe(cache(imagemin({
-      interlaced: true
-    })))
+  .pipe(cache(imagemin({ 
+  	optimizationLevel: 5, 
+  	progressive: true, 
+  	interlaced: true })))
   .pipe(gulp.dest(config.dist + '/images'))
   .pipe(browserSync.reload({
       stream: true
@@ -90,6 +91,7 @@ gulp.task('clean:dist', function() {
 gulp.task('watch',['browserSync','css','html','images'], function(){
 	//gulp.watch(config.path.styles, ['css']);
 	gulp.watch([config.path.styles, config.path.scripts, config.path.index], ['html']);
+	gulp.watch(config.path.images, ['images']);
 // we can add watching for images changes
 });
 
