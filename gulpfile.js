@@ -90,8 +90,7 @@ gulp.task('clean:dist', function() {
 gulp.task('watch',['browserSync','css','html','images'], function(){
 	//gulp.watch(config.path.styles, ['css']);
 	gulp.watch([config.path.styles, config.path.scripts, config.path.index], ['html']);
-	gulp.watch(config.path.images, ['images']);
-
+// we can add watching for images changes
 });
 
 // DEFAULT!
