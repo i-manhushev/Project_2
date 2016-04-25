@@ -58,26 +58,39 @@ a, a:hover{text-decoration: none;}
 								/*Variables*/
 
 @textMainColor: #fff;
-@containerWidth:1140px;
 @paddingContainerMarginItems: percentage(20/1140);
 @wrapped4ItemsWidth: percentage(260/1140);
 @wrapped2ItemsWidth: percentage(540/1140);
 @inputsWidth: percentage(860/1140);
+
+// media queries
+
+@mobile:    ~"only screen and (max-width:479px)";
+@tablet:   ~"only screen and (max-width:768px)";
+@tabletLarge: ~"only screen and (max-width:959px)";
+@desktop: ~"only screen and (max-width:1139px)";
 
 								/*MIXINS TO USE*/
 
 .left {float:left;}
 .right {float:right;}
 .container{
-	width: @containerWidth;
+	max-width: 1140px;
 	margin: 0 auto;
 	padding:0 @paddingContainerMarginItems;
 }
+
 .text-align{
 	text-align: center;
 }
 .paddingSection{
 	padding: 120px 0;
+	@media @tabletLarge {
+		padding: 80px 0;
+	}
+	@media @tablet {
+		padding: 60px 0;
+	}
 }
 
 .titles{
@@ -85,6 +98,12 @@ a, a:hover{text-decoration: none;}
 	letter-spacing: 3px;
 	text-transform: uppercase;
 	margin-bottom: 20px;
+	@media @tabletLarge {
+		font: 700 32px/32px 'Titillium Web', arial, sans-serif;
+	}
+	@media @tablet {
+		font: 700 28px/28px 'Titillium Web', arial, sans-serif;
+	}
 }
 .titleUnderline{
 	margin:0 auto;
@@ -98,6 +117,14 @@ a, a:hover{text-decoration: none;}
 .descrs{
 	font: 300 18px/26px 'Titillium Web', arial, sans-serif;
 	margin-bottom: 70px;
+	@media @tabletLarge{
+		margin-bottom: 50px;
+	}
+	@media @tablet {
+		font: 16px/24px 'Titillium Web', arial, sans-serif;
+		margin-bottom: 30px;
+	}
+
 }
 
 
@@ -111,6 +138,9 @@ header{
 			.left();
 			.logo__image{
 				display: block;
+				@media @tabletLarge{
+					width:90%;
+				}
 			}
 		}
 		.nav{
@@ -118,6 +148,12 @@ header{
 			.right();	
 			li{
 				margin-right:30px;
+				@media @tabletLarge{
+					margin-right:15px;
+				}
+				@media @tablet {
+					margin-right:10px;
+				}
 				&:last-child{
 					margin-right:0;
 				}
@@ -132,6 +168,10 @@ header{
 						background-color: #643a79;
 						border-radius: 4px;
 					}
+					@media @tabletLarge{
+						font: 14px/14px 'Titillium Web', arial, sans-serif;
+						padding: 4px 8px;
+					}
 				}
 			}
 		}
@@ -142,11 +182,24 @@ header{
 #home{
 	background-color: #87509c;
 	padding-top: 230px;
+	@media @tabletLarge{
+		padding-top: 180px;
+	}
+	@media @tablet{
+		padding-top: 120px;
+	}
 	.text-align();
 	.home__header{
 		color: @textMainColor;
 		font: bold 42px/48px 'Titillium Web', arial, sans-serif;
 		margin-bottom: 50px;
+		@media @tabletLarge{
+			font: bold 38px/42px 'Titillium Web', arial, sans-serif;
+		}
+		@media @tablet {
+			font: bold 34px/40px 'Titillium Web', arial, sans-serif;
+		}
+
 	}
 	.home__button{
 		background-color: #eb7d4b;
@@ -159,6 +212,14 @@ header{
 		display: inline-block;
 		border-radius: 4px;
 		box-shadow: inset 0px -4px rgba(0,0,0,0.15);
+		@media @tabletLarge{
+			margin-bottom: 100px;
+			padding: 20px 50px;
+		}
+		@media @tablet {
+			padding: 15px 40px;
+			margin-bottom: 90px;
+		}
 	}
 }
 
@@ -183,17 +244,37 @@ header{
 			.left();
 				width: @wrapped4ItemsWidth;
 				padding: 0 30px;
+				@media @tabletLarge{
+					padding: 0 15px;	
+				}
+				@media @tablet {
+					padding: 0 10px
+				}
 			&:last-child{
 				margin-right: 0;	
+			}
+			img{
+				@media @tabletLarge{
+				
+				}
 			}
 			&__title{
 				font: 18px/18px 'Titillium Web', arial, sans-serif;
 				text-transform: uppercase;
 				margin-top: 60px;
+				@media @tablet{
+					font: 16px/16px 'Titillium Web', arial, sans-serif;
+				}
 			}
 			&__descr{
 				margin-top: 25px;
 				font: 300 16px/24px 'Titillium Web', arial, sans-serif;
+				@media @tabletLarge{
+					font: 300 15px/22px 'Titillium Web', arial, sans-serif;
+				}
+				@media @tablet{
+					font: 300 14px/20px 'Titillium Web', arial, sans-serif;
+				}
 			}
 		}
 
@@ -220,36 +301,68 @@ header{
 			.left();
 			width: @wrapped4ItemsWidth;
 			padding: 0 30px;
+			@media @tabletLarge{
+				padding: 0 15px;	
+			}
+			@media @tablet {
+				padding: 0 10px
+			}
+
 			&:last-child{
 				margin-right: 0;	
 			}
 			&__pic{
+				margin: 0 auto;
 				background: #878787; 
-				width: 100%;
-				height:189px; // adjust to media size
+				width: 180px;
+				height:180px; // adjust to media size
 				border-radius: 50%;
 				overflow: hidden;
+				@media @tabletLarge{
+					width: 160px;
+					height:160px;	
+				}
+				@media @tablet{
+					width: 140px;
+					height:140px;
+				}
 				img{
 					width:100%;
 					height:100%;
+
 				}
 			}
 			&__title{
 				font: 700 18px/18px 'Titillium Web', arial, sans-serif;
 				text-transform: uppercase;
 				margin-top: 60px;
+				@media @tablet{
+					font: 700 16px/16px 'Titillium Web', arial, sans-serif;
+				}
 			}
 			&__pos{
 				margin-top: 15px;
 				color: #30bae7;
 				font: 400 16px/16px 'Titillium Web', arial, sans-serif;
+				@media @tablet{
+					font: 400 14px/14px 'Titillium Web', arial, sans-serif;	
+				}
 			}
 			&__descr{
 				margin-top: 20px;
 				font: 300 16px/24px 'Titillium Web', arial, sans-serif;
+				@media @tabletLarge{
+					font: 300 15px/22px 'Titillium Web', arial, sans-serif;
+				}
+				@media @tablet{
+					font: 300 14px/20px 'Titillium Web', arial, sans-serif;
+				}
 			}
 			&__social{
 				margin-top: 25px;
+				@media @tablet{
+					margin-top: 15px;
+				}
 				a{
 					display: inline-block;
 					width: 40px;
@@ -257,6 +370,10 @@ header{
 					background: #bdd1df url(../images/social-icon.png);
 					border-radius: 50%;
 					margin-right:3px;
+					@media @tabletLarge{
+						width: 30px;    // think how to change with position on media!!!
+						height: 30px;
+					}
 					&:last-child{
 						margin-right:0;
 					}
@@ -311,6 +428,9 @@ header{
 				font: 700 18px/18px 'Titillium Web', arial, sans-serif;
 				text-transform: uppercase;
 				margin-top: 60px;
+				@media @tablet{
+					font: 700 16px/16px 'Titillium Web', arial, sans-serif;
+				}
 			}			
 		}	
 	}
@@ -350,6 +470,10 @@ header{
 				color: #000;
 				text-transform: uppercase;
 				border-radius: 4px;
+				@media @tablet{
+					font: 14px/14px 'Titillium Web', arial, sans-serif;
+					padding: 4px 8px;
+			  }
 				&:hover{
 				background-color: #fff;
 				}
@@ -373,6 +497,9 @@ header{
 			&__title{
 				margin-top: 30px;
 				font: 18px/18px 'Titillium Web', arial, sans-serif;
+				@media @tablet{
+					font: 16px/16px 'Titillium Web', arial, sans-serif;
+				}
 			}
 		}
 	}
@@ -386,6 +513,13 @@ header{
 		display: inline-block;
 		border-radius: 4px;
 		box-shadow: inset 0px -4px rgba(0,0,0,0.15);
+		@media @tabletLarge{
+			padding: 20px 50px;
+		}
+		@media @tablet {
+			padding: 15px 40px;
+		}
+
 	}
 }	
 
@@ -416,33 +550,61 @@ header{
 			}
 			&__img{
 				float:left;
-				margin-right: 50px;
 				height: 100px;
 				width: 100px;
 				border-radius: 50%;
 				background: #878787;
 				overflow:hidden;
+				@media @tabletLarge{
+					width:90px;
+					height:90px;
+				}
 				img{				
 					height:100%;
 					width:100%;
 					line-height:100px; // adjust to media
+					@media @tabletLarge{
+						line-height:90px
+					}
 				}
 			}
 			&__text{
 				padding-left: 150px;
 				text-align: left;
+				@media @tabletLarge{
+					padding-left: 120px;
+				}
 				p{
 					font: italic 21px/31px 'Titillium Web', arial, sans-serif;
 					margin-bottom: 10px;
+					@media @tabletLarge{
+						font: italic 18px/25px 'Titillium Web', arial, sans-serif;
+					}
+					@media @tablet{
+						font: italic 15px/20px 'Titillium Web', arial, sans-serif;
+						margin-bottom: 5px;
+					}
 				}
 				.person{
 					text-transform: uppercase;
 					color: #fff;
 					font: 400 24px/26px 'Titillium Web', arial, sans-serif;
+					@media @tabletLarge{
+						font: 400 20px/22px 'Titillium Web', arial, sans-serif;
+					}
+					@media @tablet{
+						font: 400 18px/20px 'Titillium Web', arial, sans-serif;
+					}
 				}
 				.pos{
 					color: #fd9;
 					font: 400 18px/26px 'Titillium Web', arial, sans-serif;
+					@media @tabletLarge{
+						font: 400 16px/18px 'Titillium Web', arial, sans-serif;
+					}
+					@media @tablet{
+						font: 400 14px/16px 'Titillium Web', arial, sans-serif;
+					}
 				}
 			}
 		}
@@ -476,6 +638,12 @@ header{
 		display: inline-block;
 		border-radius: 4px;
 		box-shadow: inset 0px -4px rgba(0,0,0,0.15);
+		@media @tabletLarge{
+			padding: 20px 50px;
+		}
+		@media @tablet {
+			padding: 15px 40px;
+		}
 	}	
 	.inputsInfo,.inputsMessage{
 		width: @inputsWidth;
@@ -535,7 +703,6 @@ header{
 		}
 	}
 }
-
 
 
 

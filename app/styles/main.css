@@ -150,7 +150,7 @@ a:hover {
   float: right;
 }
 .container {
-  width: 1140px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 1.75438596%;
 }
@@ -160,11 +160,31 @@ a:hover {
 .paddingSection {
   padding: 120px 0;
 }
+@media only screen and (max-width:959px) {
+  .paddingSection {
+    padding: 80px 0;
+  }
+}
+@media only screen and (max-width:768px) {
+  .paddingSection {
+    padding: 60px 0;
+  }
+}
 .titles {
   font: 700 40px/40px 'Titillium Web', arial, sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+@media only screen and (max-width:959px) {
+  .titles {
+    font: 700 32px/32px 'Titillium Web', arial, sans-serif;
+  }
+}
+@media only screen and (max-width:768px) {
+  .titles {
+    font: 700 28px/28px 'Titillium Web', arial, sans-serif;
+  }
 }
 .titleUnderline {
   margin: 0 auto;
@@ -179,6 +199,17 @@ a:hover {
   font: 300 18px/26px 'Titillium Web', arial, sans-serif;
   margin-bottom: 70px;
 }
+@media only screen and (max-width:959px) {
+  .descrs {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .descrs {
+    font: 16px/24px 'Titillium Web', arial, sans-serif;
+    margin-bottom: 30px;
+  }
+}
 /*Header*/
 header {
   position: absolute;
@@ -191,6 +222,11 @@ header .logo {
 header .logo .logo__image {
   display: block;
 }
+@media only screen and (max-width:959px) {
+  header .logo .logo__image {
+    width: 90%;
+  }
+}
 header .nav {
   padding-top: 12px;
   float: right;
@@ -198,6 +234,16 @@ header .nav {
 header .nav li {
   margin-right: 30px;
   float: left;
+}
+@media only screen and (max-width:959px) {
+  header .nav li {
+    margin-right: 15px;
+  }
+}
+@media only screen and (max-width:768px) {
+  header .nav li {
+    margin-right: 10px;
+  }
 }
 header .nav li:last-child {
   margin-right: 0;
@@ -214,16 +260,42 @@ header .nav li a:hover {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
+@media only screen and (max-width:959px) {
+  header .nav li a {
+    font: 14px/14px 'Titillium Web', arial, sans-serif;
+    padding: 4px 8px;
+  }
+}
 /*Home Block*/
 #home {
   background-color: #87509c;
   padding-top: 230px;
   text-align: center;
 }
+@media only screen and (max-width:959px) {
+  #home {
+    padding-top: 180px;
+  }
+}
+@media only screen and (max-width:768px) {
+  #home {
+    padding-top: 120px;
+  }
+}
 #home .home__header {
   color: #fff;
   font: bold 42px/48px 'Titillium Web', arial, sans-serif;
   margin-bottom: 50px;
+}
+@media only screen and (max-width:959px) {
+  #home .home__header {
+    font: bold 38px/42px 'Titillium Web', arial, sans-serif;
+  }
+}
+@media only screen and (max-width:768px) {
+  #home .home__header {
+    font: bold 34px/40px 'Titillium Web', arial, sans-serif;
+  }
 }
 #home .home__button {
   background-color: #eb7d4b;
@@ -239,6 +311,18 @@ header .nav li a:hover {
   -webkit-box-shadow: inset 0px -4px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px rgba(0, 0, 0, 0.15);
 }
+@media only screen and (max-width:959px) {
+  #home .home__button {
+    margin-bottom: 100px;
+    padding: 20px 50px;
+  }
+}
+@media only screen and (max-width:768px) {
+  #home .home__button {
+    padding: 15px 40px;
+    margin-bottom: 90px;
+  }
+}
 /*Services Block*/
 #services {
   background-color: #17c2a4;
@@ -246,11 +330,31 @@ header .nav li a:hover {
   text-align: center;
   color: #fff;
 }
+@media only screen and (max-width:959px) {
+  #services {
+    padding: 80px 0;
+  }
+}
+@media only screen and (max-width:768px) {
+  #services {
+    padding: 60px 0;
+  }
+}
 #services .title {
   font: 700 40px/40px 'Titillium Web', arial, sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+@media only screen and (max-width:959px) {
+  #services .title {
+    font: 700 32px/32px 'Titillium Web', arial, sans-serif;
+  }
+}
+@media only screen and (max-width:768px) {
+  #services .title {
+    font: 700 28px/28px 'Titillium Web', arial, sans-serif;
+  }
 }
 #services .title:after {
   margin: 0 auto;
@@ -265,11 +369,32 @@ header .nav li a:hover {
   font: 300 18px/26px 'Titillium Web', arial, sans-serif;
   margin-bottom: 70px;
 }
+@media only screen and (max-width:959px) {
+  #services .descr {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width:768px) {
+  #services .descr {
+    font: 16px/24px 'Titillium Web', arial, sans-serif;
+    margin-bottom: 30px;
+  }
+}
 #services .services__wrap .s__item {
   margin-right: 1.75438596%;
   float: left;
   width: 22.80701754%;
   padding: 0 30px;
+}
+@media only screen and (max-width:959px) {
+  #services .services__wrap .s__item {
+    padding: 0 15px;
+  }
+}
+@media only screen and (max-width:768px) {
+  #services .services__wrap .s__item {
+    padding: 0 10px;
+  }
 }
 #services .services__wrap .s__item:last-child {
   margin-right: 0;
@@ -279,9 +404,24 @@ header .nav li a:hover {
   text-transform: uppercase;
   margin-top: 60px;
 }
+@media only screen and (max-width:768px) {
+  #services .services__wrap .s__item__title {
+    font: 16px/16px 'Titillium Web', arial, sans-serif;
+  }
+}
 #services .services__wrap .s__item__descr {
   margin-top: 25px;
   font: 300 16px/24px 'Titillium Web', arial, sans-serif;
+}
+@media only screen and (max-width:959px) {
+  #services .services__wrap .s__item__descr {
+    font: 300 15px/22px 'Titillium Web', arial, sans-serif;
+  }
+}
+@media only screen and (max-width:768px) {
+  #services .services__wrap .s__item__descr {
+    font: 300 14px/20px 'Titillium Web', arial, sans-serif;
+  }
 }
 /*Team Block*/
 #team {
@@ -289,11 +429,31 @@ header .nav li a:hover {
   padding: 120px 0;
   text-align: center;
 }
+@media only screen and (max-width:959px) {
+  #team {
+    padding: 80px 0;
+  }
+}
+@media only screen and (max-width:768px) {
+  #team {
+    padding: 60px 0;
+  }
+}
 #team .title {
   font: 700 40px/40px 'Titillium Web', arial, sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+@media only screen and (max-width:959px) {
+  #team .title {
+    font: 700 32px/32px 'Titillium Web', arial, sans-serif;
+  }
+}
+@media only screen and (max-width:768px) {
+  #team .title {
+    font: 700 28px/28px 'Titillium Web', arial, sans-serif;
+  }
 }
 #team .title:after {
   margin: 0 auto;
@@ -308,22 +468,56 @@ header .nav li a:hover {
   font: 300 18px/26px 'Titillium Web', arial, sans-serif;
   margin-bottom: 70px;
 }
+@media only screen and (max-width:959px) {
+  #team .descr {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width:768px) {
+  #team .descr {
+    font: 16px/24px 'Titillium Web', arial, sans-serif;
+    margin-bottom: 30px;
+  }
+}
 #team .team__wrap .t__item {
   margin-right: 1.75438596%;
   float: left;
   width: 22.80701754%;
   padding: 0 30px;
 }
+@media only screen and (max-width:959px) {
+  #team .team__wrap .t__item {
+    padding: 0 15px;
+  }
+}
+@media only screen and (max-width:768px) {
+  #team .team__wrap .t__item {
+    padding: 0 10px;
+  }
+}
 #team .team__wrap .t__item:last-child {
   margin-right: 0;
 }
 #team .team__wrap .t__item__pic {
+  margin: 0 auto;
   background: #878787;
-  width: 100%;
-  height: 189px;
+  width: 180px;
+  height: 180px;
   -webkit-border-radius: 50%;
   border-radius: 50%;
   overflow: hidden;
+}
+@media only screen and (max-width:959px) {
+  #team .team__wrap .t__item__pic {
+    width: 160px;
+    height: 160px;
+  }
+}
+@media only screen and (max-width:768px) {
+  #team .team__wrap .t__item__pic {
+    width: 140px;
+    height: 140px;
+  }
 }
 #team .team__wrap .t__item__pic img {
   width: 100%;
@@ -334,17 +528,42 @@ header .nav li a:hover {
   text-transform: uppercase;
   margin-top: 60px;
 }
+@media only screen and (max-width:768px) {
+  #team .team__wrap .t__item__title {
+    font: 700 16px/16px 'Titillium Web', arial, sans-serif;
+  }
+}
 #team .team__wrap .t__item__pos {
   margin-top: 15px;
   color: #30bae7;
   font: 400 16px/16px 'Titillium Web', arial, sans-serif;
 }
+@media only screen and (max-width:768px) {
+  #team .team__wrap .t__item__pos {
+    font: 400 14px/14px 'Titillium Web', arial, sans-serif;
+  }
+}
 #team .team__wrap .t__item__descr {
   margin-top: 20px;
   font: 300 16px/24px 'Titillium Web', arial, sans-serif;
 }
+@media only screen and (max-width:959px) {
+  #team .team__wrap .t__item__descr {
+    font: 300 15px/22px 'Titillium Web', arial, sans-serif;
+  }
+}
+@media only screen and (max-width:768px) {
+  #team .team__wrap .t__item__descr {
+    font: 300 14px/20px 'Titillium Web', arial, sans-serif;
+  }
+}
 #team .team__wrap .t__item__social {
   margin-top: 25px;
+}
+@media only screen and (max-width:768px) {
+  #team .team__wrap .t__item__social {
+    margin-top: 15px;
+  }
 }
 #team .team__wrap .t__item__social a {
   display: inline-block;
@@ -354,6 +573,12 @@ header .nav li a:hover {
   -webkit-border-radius: 50%;
   border-radius: 50%;
   margin-right: 3px;
+}
+@media only screen and (max-width:959px) {
+  #team .team__wrap .t__item__social a {
+    width: 30px;
+    height: 30px;
+  }
 }
 #team .team__wrap .t__item__social a:last-child {
   margin-right: 0;
@@ -379,11 +604,31 @@ header .nav li a:hover {
   padding: 120px 0;
   text-align: center;
 }
+@media only screen and (max-width:959px) {
+  #skills {
+    padding: 80px 0;
+  }
+}
+@media only screen and (max-width:768px) {
+  #skills {
+    padding: 60px 0;
+  }
+}
 #skills .title {
   font: 700 40px/40px 'Titillium Web', arial, sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+@media only screen and (max-width:959px) {
+  #skills .title {
+    font: 700 32px/32px 'Titillium Web', arial, sans-serif;
+  }
+}
+@media only screen and (max-width:768px) {
+  #skills .title {
+    font: 700 28px/28px 'Titillium Web', arial, sans-serif;
+  }
 }
 #skills .title:after {
   margin: 0 auto;
@@ -397,6 +642,17 @@ header .nav li a:hover {
 #skills .descr {
   font: 300 18px/26px 'Titillium Web', arial, sans-serif;
   margin-bottom: 70px;
+}
+@media only screen and (max-width:959px) {
+  #skills .descr {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width:768px) {
+  #skills .descr {
+    font: 16px/24px 'Titillium Web', arial, sans-serif;
+    margin-bottom: 30px;
+  }
 }
 #skills .skills__wrap .sk__item {
   outline: 1px solid red;
@@ -413,17 +669,42 @@ header .nav li a:hover {
   text-transform: uppercase;
   margin-top: 60px;
 }
+@media only screen and (max-width:768px) {
+  #skills .skills__wrap .sk__item__title {
+    font: 700 16px/16px 'Titillium Web', arial, sans-serif;
+  }
+}
 /*Portfolio block*/
 #portfolio {
   background-color: #fd9;
   padding: 120px 0;
   text-align: center;
 }
+@media only screen and (max-width:959px) {
+  #portfolio {
+    padding: 80px 0;
+  }
+}
+@media only screen and (max-width:768px) {
+  #portfolio {
+    padding: 60px 0;
+  }
+}
 #portfolio .title {
   font: 700 40px/40px 'Titillium Web', arial, sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+@media only screen and (max-width:959px) {
+  #portfolio .title {
+    font: 700 32px/32px 'Titillium Web', arial, sans-serif;
+  }
+}
+@media only screen and (max-width:768px) {
+  #portfolio .title {
+    font: 700 28px/28px 'Titillium Web', arial, sans-serif;
+  }
 }
 #portfolio .title:after {
   margin: 0 auto;
@@ -438,6 +719,17 @@ header .nav li a:hover {
   font: 300 18px/26px 'Titillium Web', arial, sans-serif;
   margin-bottom: 70px;
   margin-bottom: 40px;
+}
+@media only screen and (max-width:959px) {
+  #portfolio .descr {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width:768px) {
+  #portfolio .descr {
+    font: 16px/24px 'Titillium Web', arial, sans-serif;
+    margin-bottom: 30px;
+  }
 }
 #portfolio .portfolio__nav {
   display: inline-block;
@@ -460,6 +752,12 @@ header .nav li a:hover {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
+@media only screen and (max-width:768px) {
+  #portfolio .portfolio__nav li a {
+    font: 14px/14px 'Titillium Web', arial, sans-serif;
+    padding: 4px 8px;
+  }
+}
 #portfolio .portfolio__nav li a:hover {
   background-color: #fff;
 }
@@ -481,6 +779,11 @@ header .nav li a:hover {
   margin-top: 30px;
   font: 18px/18px 'Titillium Web', arial, sans-serif;
 }
+@media only screen and (max-width:768px) {
+  #portfolio .portfolio__wrap .p__item__title {
+    font: 16px/16px 'Titillium Web', arial, sans-serif;
+  }
+}
 #portfolio .portfolio__button {
   background-color: #17c2a4;
   padding: 25px 80px;
@@ -494,6 +797,16 @@ header .nav li a:hover {
   -webkit-box-shadow: inset 0px -4px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px rgba(0, 0, 0, 0.15);
 }
+@media only screen and (max-width:959px) {
+  #portfolio .portfolio__button {
+    padding: 20px 50px;
+  }
+}
+@media only screen and (max-width:768px) {
+  #portfolio .portfolio__button {
+    padding: 15px 40px;
+  }
+}
 /*About block*/
 #about {
   background-color: #d74680;
@@ -501,11 +814,31 @@ header .nav li a:hover {
   padding: 120px 0;
   text-align: center;
 }
+@media only screen and (max-width:959px) {
+  #about {
+    padding: 80px 0;
+  }
+}
+@media only screen and (max-width:768px) {
+  #about {
+    padding: 60px 0;
+  }
+}
 #about .title {
   font: 700 40px/40px 'Titillium Web', arial, sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+@media only screen and (max-width:959px) {
+  #about .title {
+    font: 700 32px/32px 'Titillium Web', arial, sans-serif;
+  }
+}
+@media only screen and (max-width:768px) {
+  #about .title {
+    font: 700 28px/28px 'Titillium Web', arial, sans-serif;
+  }
 }
 #about .title:after {
   margin: 0 auto;
@@ -520,6 +853,17 @@ header .nav li a:hover {
   font: 300 18px/26px 'Titillium Web', arial, sans-serif;
   margin-bottom: 70px;
 }
+@media only screen and (max-width:959px) {
+  #about .descr {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width:768px) {
+  #about .descr {
+    font: 16px/24px 'Titillium Web', arial, sans-serif;
+    margin-bottom: 30px;
+  }
+}
 #about .about__wrap .a__item {
   float: left;
   width: 47.36842105%;
@@ -533,7 +877,6 @@ header .nav li a:hover {
 }
 #about .about__wrap .a__item__img {
   float: left;
-  margin-right: 50px;
   height: 100px;
   width: 100px;
   -webkit-border-radius: 50%;
@@ -541,27 +884,74 @@ header .nav li a:hover {
   background: #878787;
   overflow: hidden;
 }
+@media only screen and (max-width:959px) {
+  #about .about__wrap .a__item__img {
+    width: 90px;
+    height: 90px;
+  }
+}
 #about .about__wrap .a__item__img img {
   height: 100%;
   width: 100%;
   line-height: 100px;
 }
+@media only screen and (max-width:959px) {
+  #about .about__wrap .a__item__img img {
+    line-height: 90px;
+  }
+}
 #about .about__wrap .a__item__text {
   padding-left: 150px;
   text-align: left;
 }
+@media only screen and (max-width:959px) {
+  #about .about__wrap .a__item__text {
+    padding-left: 120px;
+  }
+}
 #about .about__wrap .a__item__text p {
   font: italic 21px/31px 'Titillium Web', arial, sans-serif;
   margin-bottom: 10px;
+}
+@media only screen and (max-width:959px) {
+  #about .about__wrap .a__item__text p {
+    font: italic 18px/25px 'Titillium Web', arial, sans-serif;
+  }
+}
+@media only screen and (max-width:768px) {
+  #about .about__wrap .a__item__text p {
+    font: italic 15px/20px 'Titillium Web', arial, sans-serif;
+    margin-bottom: 5px;
+  }
 }
 #about .about__wrap .a__item__text .person {
   text-transform: uppercase;
   color: #fff;
   font: 400 24px/26px 'Titillium Web', arial, sans-serif;
 }
+@media only screen and (max-width:959px) {
+  #about .about__wrap .a__item__text .person {
+    font: 400 20px/22px 'Titillium Web', arial, sans-serif;
+  }
+}
+@media only screen and (max-width:768px) {
+  #about .about__wrap .a__item__text .person {
+    font: 400 18px/20px 'Titillium Web', arial, sans-serif;
+  }
+}
 #about .about__wrap .a__item__text .pos {
   color: #fd9;
   font: 400 18px/26px 'Titillium Web', arial, sans-serif;
+}
+@media only screen and (max-width:959px) {
+  #about .about__wrap .a__item__text .pos {
+    font: 400 16px/18px 'Titillium Web', arial, sans-serif;
+  }
+}
+@media only screen and (max-width:768px) {
+  #about .about__wrap .a__item__text .pos {
+    font: 400 14px/16px 'Titillium Web', arial, sans-serif;
+  }
 }
 /*Contacts block*/
 #contacts {
@@ -570,11 +960,31 @@ header .nav li a:hover {
   padding: 120px 0;
   text-align: center;
 }
+@media only screen and (max-width:959px) {
+  #contacts {
+    padding: 80px 0;
+  }
+}
+@media only screen and (max-width:768px) {
+  #contacts {
+    padding: 60px 0;
+  }
+}
 #contacts .title {
   font: 700 40px/40px 'Titillium Web', arial, sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+@media only screen and (max-width:959px) {
+  #contacts .title {
+    font: 700 32px/32px 'Titillium Web', arial, sans-serif;
+  }
+}
+@media only screen and (max-width:768px) {
+  #contacts .title {
+    font: 700 28px/28px 'Titillium Web', arial, sans-serif;
+  }
 }
 #contacts .title:after {
   margin: 0 auto;
@@ -588,6 +998,17 @@ header .nav li a:hover {
 #contacts .descr {
   font: 300 18px/26px 'Titillium Web', arial, sans-serif;
   margin-bottom: 70px;
+}
+@media only screen and (max-width:959px) {
+  #contacts .descr {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width:768px) {
+  #contacts .descr {
+    font: 16px/24px 'Titillium Web', arial, sans-serif;
+    margin-bottom: 30px;
+  }
 }
 #contacts .contacts__button {
   border: none;
@@ -603,6 +1024,16 @@ header .nav li a:hover {
   border-radius: 4px;
   -webkit-box-shadow: inset 0px -4px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px rgba(0, 0, 0, 0.15);
+}
+@media only screen and (max-width:959px) {
+  #contacts .contacts__button {
+    padding: 20px 50px;
+  }
+}
+@media only screen and (max-width:768px) {
+  #contacts .contacts__button {
+    padding: 15px 40px;
+  }
 }
 #contacts .inputsInfo,
 #contacts .inputsMessage {
