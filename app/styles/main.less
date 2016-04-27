@@ -332,6 +332,13 @@ header{
 				}
 			
 			}
+			&__pic{
+				img{
+				max-width: 189px;
+				width:100%;
+				height:auto;
+				}
+			}
 		}
 	}
 }
@@ -451,6 +458,16 @@ header{
 					margin-top: 10px;
 					margin-bottom: 10px;
 				}
+				@media @mobile{
+					width:100%;		
+					text-align: justify;
+					font-size: 0.1px;
+					&:after{
+					content:'';
+					width:100%;
+					display: inline-block;
+					}
+				}
 				a{
 					display: inline-block;
 					width: 40px;
@@ -461,6 +478,10 @@ header{
 					@media @tabletLarge{
 						width: 30px;    // think how to change with position on media!!!
 						height: 30px;
+					}
+					@media @mobile{
+						margin-right:0;
+						vertical-align: top;
 					}
 					&:last-child{
 						margin-right:0;

@@ -542,6 +542,11 @@ header .nav li a:hover {
     margin-top: 10px;
   }
 }
+#services .services__wrap .s__item__pic img {
+  max-width: 189px;
+  width: 100%;
+  height: auto;
+}
 /*Team Block*/
 #team {
   background-color: #e7f1f8;
@@ -760,6 +765,18 @@ header .nav li a:hover {
     margin-bottom: 10px;
   }
 }
+@media only screen and (max-width:359px) {
+  #team .team__wrap .t__item__social {
+    width: 100%;
+    text-align: justify;
+    font-size: 0.1px;
+  }
+  #team .team__wrap .t__item__social:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+  }
+}
 #team .team__wrap .t__item__social a {
   display: inline-block;
   width: 40px;
@@ -773,6 +790,12 @@ header .nav li a:hover {
   #team .team__wrap .t__item__social a {
     width: 30px;
     height: 30px;
+  }
+}
+@media only screen and (max-width:359px) {
+  #team .team__wrap .t__item__social a {
+    margin-right: 0;
+    vertical-align: top;
   }
 }
 #team .team__wrap .t__item__social a:last-child {
