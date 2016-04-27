@@ -468,12 +468,22 @@ header .nav li a:hover {
     margin-bottom: 30px;
   }
 }
+#services .services__wrap {
+  width: 100%;
+  text-align: justify;
+  font-size: 0.1px;
+}
+#services .services__wrap:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
 #services .services__wrap .s__item {
-  float: left;
+  vertical-align: top;
   width: 22.80701754%;
   padding: 0 30px;
-  margin-right: 1.75438596%;
-  /*think what to do with pics*/
+  display: inline-block;
+  text-align: center;
 }
 @media only screen and (max-width:959px) {
   #services .services__wrap .s__item {
@@ -484,22 +494,21 @@ header .nav li a:hover {
   #services .services__wrap .s__item {
     width: 47.36842105%;
     padding: 0 10px;
-    margin-right: 5.26315789%;
-  }
-  #services .services__wrap .s__item.nomarg {
-    margin-right: 0;
+    /*think what to do with pics*/
   }
   #services .services__wrap .s__item.bottom {
     margin-top: 20px;
   }
 }
-#services .services__wrap .s__item:last-child {
-  margin-right: 0;
-}
 #services .services__wrap .s__item__title {
   font: 18px/18px 'Titillium Web', arial, sans-serif;
   text-transform: uppercase;
   margin-top: 60px;
+}
+@media only screen and (max-width:959px) {
+  #services .services__wrap .s__item__title {
+    margin-top: 50px;
+  }
 }
 @media only screen and (max-width:768px) {
   #services .services__wrap .s__item__title {
@@ -516,9 +525,14 @@ header .nav li a:hover {
   margin-top: 25px;
   font: 300 16px/24px 'Titillium Web', arial, sans-serif;
 }
+@media only screen and (max-width:959px) {
+  #services .services__wrap .s__item__descr {
+    margin-top: 20px;
+    font: 300 15px/22px 'Titillium Web', arial, sans-serif;
+  }
+}
 @media only screen and (max-width:768px) {
   #services .services__wrap .s__item__descr {
-    font: 300 15px/22px 'Titillium Web', arial, sans-serif;
     margin-top: 15px;
   }
 }
@@ -617,11 +631,22 @@ header .nav li a:hover {
     margin-bottom: 30px;
   }
 }
+#team .team__wrap {
+  width: 100%;
+  text-align: justify;
+  font-size: 0.1px;
+}
+#team .team__wrap:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
 #team .team__wrap .t__item {
-  margin-right: 1.75438596%;
-  float: left;
+  vertical-align: top;
   width: 22.80701754%;
-  padding: 0 30px;
+  padding: 0 18px;
+  display: inline-block;
+  text-align: center;
 }
 @media only screen and (max-width:959px) {
   #team .team__wrap .t__item {
@@ -632,17 +657,10 @@ header .nav li a:hover {
   #team .team__wrap .t__item {
     width: 47.36842105%;
     padding: 0 10px;
-    margin-right: 5.26315789%;
-  }
-  #team .team__wrap .t__item.nomarg {
-    margin-right: 0;
   }
   #team .team__wrap .t__item.bottom {
     margin-top: 20px;
   }
-}
-#team .team__wrap .t__item:last-child {
-  margin-right: 0;
 }
 #team .team__wrap .t__item__pic {
   margin: 0 auto;
@@ -680,6 +698,11 @@ header .nav li a:hover {
   text-transform: uppercase;
   margin-top: 60px;
 }
+@media only screen and (max-width:959px) {
+  #team .team__wrap .t__item__title {
+    margin-top: 50px;
+  }
+}
 @media only screen and (max-width:768px) {
   #team .team__wrap .t__item__title {
     margin-top: 45px;
@@ -711,9 +734,14 @@ header .nav li a:hover {
   margin-top: 25px;
   font: 300 16px/24px 'Titillium Web', arial, sans-serif;
 }
+@media only screen and (max-width:959px) {
+  #team .team__wrap .t__item__descr {
+    margin-top: 20px;
+    font: 300 15px/22px 'Titillium Web', arial, sans-serif;
+  }
+}
 @media only screen and (max-width:768px) {
   #team .team__wrap .t__item__descr {
-    font: 300 15px/22px 'Titillium Web', arial, sans-serif;
     margin-top: 15px;
   }
 }
@@ -728,7 +756,8 @@ header .nav li a:hover {
 }
 @media only screen and (max-width:768px) {
   #team .team__wrap .t__item__social {
-    margin-top: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 #team .team__wrap .t__item__social a {
@@ -755,14 +784,34 @@ header .nav li a:hover {
 #team .team__wrap .t__item__social .team-face {
   background-position: 0 0;
 }
+@media only screen and (max-width:959px) {
+  #team .team__wrap .t__item__social .team-face {
+    background-position: -5px -5px;
+  }
+}
 #team .team__wrap .t__item__social .team-twit {
   background-position: -40px 0;
+}
+@media only screen and (max-width:959px) {
+  #team .team__wrap .t__item__social .team-twit {
+    background-position: -45px -5px;
+  }
 }
 #team .team__wrap .t__item__social .team-linked {
   background-position: -80px 0;
 }
+@media only screen and (max-width:959px) {
+  #team .team__wrap .t__item__social .team-linked {
+    background-position: -85px -5px;
+  }
+}
 #team .team__wrap .t__item__social .team-mail {
   background-position: -120px 0;
+}
+@media only screen and (max-width:959px) {
+  #team .team__wrap .t__item__social .team-mail {
+    background-position: -125px -5px;
+  }
 }
 /*Skills Block*/
 #skills {
@@ -853,28 +902,32 @@ header .nav li a:hover {
     margin-bottom: 30px;
   }
 }
+#skills .skills__wrap {
+  width: 100%;
+  text-align: justify;
+  font-size: 0.1px;
+}
+#skills .skills__wrap:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
 #skills .skills__wrap .sk__item {
   outline: 1px solid red;
-  margin-right: 1.75438596%;
-  float: left;
+  vertical-align: top;
   width: 22.80701754%;
   padding: 0 30px;
+  display: inline-block;
+  text-align: center;
 }
 @media only screen and (max-width:768px) {
   #skills .skills__wrap .sk__item {
     width: 47.36842105%;
     padding: 0 10px;
-    margin-right: 5.26315789%;
-  }
-  #skills .skills__wrap .sk__item.nomarg {
-    margin-right: 0;
   }
   #skills .skills__wrap .sk__item.bottom {
     margin-top: 20px;
   }
-}
-#skills .skills__wrap .sk__item:last-child {
-  margin-right: 0;
 }
 #skills .skills__wrap .sk__item__title {
   font: 700 18px/18px 'Titillium Web', arial, sans-serif;
@@ -982,9 +1035,19 @@ header .nav li a:hover {
     margin-bottom: 30px;
   }
 }
+@media only screen and (max-width:768px) {
+  #portfolio .descr {
+    margin-bottom: 20px;
+  }
+}
 #portfolio .portfolio__nav {
   display: inline-block;
   margin: 0 auto 70px;
+}
+@media only screen and (max-width:768px) {
+  #portfolio .portfolio__nav {
+    margin-bottom: 50px;
+  }
 }
 #portfolio .portfolio__nav li {
   float: left;
@@ -1012,8 +1075,20 @@ header .nav li a:hover {
 #portfolio .portfolio__nav li a:hover {
   background-color: #fff;
 }
+#portfolio .portfolio__wrap {
+  width: 100%;
+  text-align: justify;
+  font-size: 0.1px;
+}
+#portfolio .portfolio__wrap:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
 #portfolio .portfolio__wrap .p__item {
-  float: left;
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
   margin-bottom: 60px;
   width: 47.36842105%;
 }
@@ -1023,15 +1098,13 @@ header .nav li a:hover {
 #portfolio .portfolio__wrap .p__item a:hover {
   opacity: 0.6;
 }
-#portfolio .portfolio__wrap .p__item:nth-child(odd) {
-  margin-right: 5.26315789%;
-}
 #portfolio .portfolio__wrap .p__item__title {
   margin-top: 30px;
   font: 18px/18px 'Titillium Web', arial, sans-serif;
 }
 @media only screen and (max-width:768px) {
   #portfolio .portfolio__wrap .p__item__title {
+    margin-top: 20px;
     font: 16px/16px 'Titillium Web', arial, sans-serif;
   }
 }
@@ -1148,13 +1221,21 @@ header .nav li a:hover {
     margin-bottom: 30px;
   }
 }
-#about .about__wrap .a__item {
-  float: left;
-  width: 47.36842105%;
-  margin-right: 5.26315789%;
+#about .about__wrap {
+  width: 100%;
+  text-align: justify;
+  font-size: 0.1px;
 }
-#about .about__wrap .a__item.nomarg {
-  margin-right: 0;
+#about .about__wrap:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+#about .about__wrap .a__item {
+  width: 47.36842105%;
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
 }
 #about .about__wrap .a__item.bottom {
   margin-top: 120px;

@@ -275,34 +275,38 @@ header{
 		.descrs();
 	}
 	.services__wrap{
+		width:100%;		
+		text-align: justify;
+		font-size: 0.1px;
+		&:after{
+			content:'';
+			width:100%;
+			display: inline-block;
+		}
 		.s__item{
-			.left();
+			vertical-align: top;
 			width: @wrapped4ItemsWidth;
 			padding: 0 30px;
-			margin-right: @paddingContainerMarginItems;
+			display: inline-block;
+			text-align: center;
 			@media @tabletLarge{
 				padding: 0 15px;	
 			}
 			@media @tablet {
+				&.bottom{
+					margin-top: 20px;
+				}
 				width: @wrapped2ItemsWidth;
 				padding: 0 10px;
-				margin-right: @paddingContainerMarginItems*3;
-				&.nomarg{
-						margin-right: 0;	
-				}
-				&.bottom{
-						margin-top: 20px;
-				}
-			}	
-			&:last-child{
-				margin-right: 0;
-			}
   				/*think what to do with pics*/
-
+			}
 			&__title{
 				font: 18px/18px 'Titillium Web', arial, sans-serif;
 				text-transform: uppercase;
 				margin-top: 60px;
+				@media @tabletLarge{
+					margin-top: 50px;
+				}
 				@media @tablet{
 					margin-top: 45px;
 				}
@@ -315,17 +319,20 @@ header{
 			&__descr{
 				margin-top: 25px;
 				font: 300 16px/24px 'Titillium Web', arial, sans-serif;
+				@media @tabletLarge{
+				margin-top: 20px;	
+				font: 300 15px/22px 'Titillium Web', arial, sans-serif;
+				}
 				@media @tablet{
-					font: 300 15px/22px 'Titillium Web', arial, sans-serif;
 					margin-top: 15px;
 				}
 				@media @mobilePortrait{
 					font: 300 14px/16px 'Titillium Web', arial, sans-serif;
 					margin-top: 10px;
 				}
+			
 			}
 		}
-
 	}
 }
 
@@ -344,29 +351,31 @@ header{
 		.descrs();
 	}
 	.team__wrap{
+		width:100%;		
+		text-align: justify;
+		font-size: 0.1px;
+		&:after{
+			content:'';
+			width:100%;
+			display: inline-block;
+		}
 		.t__item{
-			margin-right: @paddingContainerMarginItems;
-			.left();
+			vertical-align: top;
 			width: @wrapped4ItemsWidth;
-			padding: 0 30px;
+			padding: 0 18px;
+			display: inline-block;
+			text-align: center;
 			@media @tabletLarge{
 				padding: 0 15px;	
 			}
 			@media @tablet {
+				&.bottom{
+					margin-top: 20px;
+				}
 				width: @wrapped2ItemsWidth;
 				padding: 0 10px;
-				margin-right: @paddingContainerMarginItems*3;
-				&.nomarg{
-						margin-right: 0;	
-				}
-				&.bottom{
-						margin-top: 20px;
-				}
 			}
 
-			&:last-child{
-				margin-right: 0;	
-			}
 			&__pic{
 				margin: 0 auto;
 				background: #878787; 
@@ -396,6 +405,9 @@ header{
 				font: 700 18px/18px 'Titillium Web', arial, sans-serif;
 				text-transform: uppercase;
 				margin-top: 60px;
+				@media @tabletLarge{
+					margin-top: 50px;
+				}
 				@media @tablet{
 					margin-top: 45px;
 				}
@@ -421,8 +433,11 @@ header{
 			&__descr{
 				margin-top: 25px;
 				font: 300 16px/24px 'Titillium Web', arial, sans-serif;
+				@media @tabletLarge{
+				margin-top: 20px;	
+				font: 300 15px/22px 'Titillium Web', arial, sans-serif;
+				}
 				@media @tablet{
-					font: 300 15px/22px 'Titillium Web', arial, sans-serif;
 					margin-top: 15px;
 				}
 				@media @mobilePortrait{
@@ -433,7 +448,8 @@ header{
 			&__social{
 				margin-top: 25px;
 				@media @tablet{
-					margin-top: 15px;
+					margin-top: 10px;
+					margin-bottom: 10px;
 				}
 				a{
 					display: inline-block;
@@ -454,16 +470,28 @@ header{
 					}
 				}
 				.team-face{
-					background-position:0 0; 
+					background-position: 0 0;
+					@media @tabletLarge{
+					background-position: -5px -5px;	
+					} 
 				}
 				.team-twit{
 					background-position: -40px 0;
+					@media @tabletLarge{
+					background-position: -45px -5px;	
+					} 
 				}
 				.team-linked{
 					background-position: -80px 0;
+					@media @tabletLarge{
+					background-position: -85px -5px;	
+					} 
 				}
 				.team-mail{
 					background-position: -120px 0;
+					@media @tabletLarge{
+					background-position: -125px -5px;	
+					} 
 				}
 			}
 		}
@@ -487,26 +515,28 @@ header{
 		.descrs();
 	}
 	.skills__wrap{
+		width:100%;		
+		text-align: justify;
+		font-size: 0.1px;
+		&:after{
+			content:'';
+			width:100%;
+			display: inline-block;
+		}
 		.sk__item{
 			outline: 1px solid red;
-			margin-right: @paddingContainerMarginItems;
-			.left();
+			vertical-align: top;
 			width: @wrapped4ItemsWidth;
 			padding: 0 30px;
+			display: inline-block;
+			text-align: center;
 
 			@media @tablet {
+				&.bottom{
+					margin-top: 20px;
+				}
 				width: @wrapped2ItemsWidth;
 				padding: 0 10px;
-				margin-right: @paddingContainerMarginItems*3;
-				&.nomarg{
-						margin-right: 0;	
-				}
-				&.bottom{
-						margin-top: 20px;
-				}
-			}
-			&:last-child{
-				margin-right: 0;	
 			}
 			&__title{
 				font: 700 18px/18px 'Titillium Web', arial, sans-serif;
@@ -540,10 +570,16 @@ header{
 	.descr{
 		.descrs();
 		margin-bottom: 40px;
+		@media @tablet{
+			margin-bottom: 20px;
+		}
 	}	
 	.portfolio__nav{
 		display: inline-block; // think how to center with nav remaining block;
 		margin: 0 auto 70px; // center the navigation
+		@media @tablet{
+			margin-bottom: 50px;
+		}
 		li{
 			.left();			
 			margin-right:10px;
@@ -569,8 +605,18 @@ header{
 		}
 	}
 	.portfolio__wrap{
+		width:100%;		
+		text-align: justify;
+		font-size: 0.1px;
+		&:after{
+			content:'';
+			width:100%;
+			display: inline-block;
+		}
 		.p__item{
-			.left();
+			vertical-align: top;
+			display: inline-block;
+			text-align: center;
 			margin-bottom: 60px;			
 			width: @wrapped2ItemsWidth;
 			img{
@@ -579,13 +625,11 @@ header{
 			a:hover{
 				opacity:0.6;
 			}
-			&:nth-child(odd){
-				margin-right: @paddingContainerMarginItems*3;
-			}
 			&__title{
 				margin-top: 30px;
 				font: 18px/18px 'Titillium Web', arial, sans-serif;
 				@media @tablet{
+					margin-top: 20px;
 					font: 16px/16px 'Titillium Web', arial, sans-serif;
 				}
 			}
@@ -627,13 +671,19 @@ header{
 		.descrs();
 	}	
 	.about__wrap{
+		width:100%;		
+		text-align: justify;
+		font-size: 0.1px;
+		&:after{
+			content:'';
+			width:100%;
+			display: inline-block;
+		}
 		.a__item{
-			.left();		
 			width: @wrapped2ItemsWidth;
-			margin-right: @paddingContainerMarginItems*3;
-			&.nomarg{
-				margin-right:0;
-			}
+			vertical-align: top;
+			display: inline-block;
+			text-align: center;
 			&.bottom{
 				margin-top: 120px;
 			}
