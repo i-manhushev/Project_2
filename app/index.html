@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600,700' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<!-- build:css styles/mainTotal.css -->
 	<link rel="stylesheet" href="styles/main.css">
 	<!-- endbuild -->
@@ -18,9 +19,10 @@
 <body>
 	<div class="wrapper">
 							<!-- Absolute Header -->
-		<header>
+		<header id="header">
 			<div class="container clearfix">
 			<div class="logo"><img src="images/logo.png" alt="Cuda" class="logo__image"></div>
+			<a href="#" class="header__menu">Menu</a>
 				<ul class="nav">
 					<li><a href="#home">Home</a></li>
 					<li><a href="#services">We offer</a></li>
@@ -221,9 +223,9 @@
 				<h2 class="title">What people say about us</h2>
 				<p class="descr">Our clients love us!</p>
 				
-				<div class="about__wrap clearfix">
-				<div>
-					<div class="a__item">
+				<div class="about__wrap">
+				<div class="about__wrap__section">
+					<div class="a__item clearfix">
 						<div class="a__item__img">
 							<img src="" alt="Chanel Iman">
 						</div>
@@ -233,7 +235,7 @@
 							<span class="pos">CEO of Pinterest</span>
 						</div>
 					</div>
-					<div class="a__item">
+					<div class="a__item clearfix">
 						<div class="a__item__img">
 							<img src="" alt="Adriana Lima" />
 						</div>
@@ -244,8 +246,8 @@
 						</div>
 					</div>
 				</div>
-				<div>	
-					<div class="a__item bottom">
+				<div class="about__wrap__section">
+					<div class="a__item bottom clearfix">
 						<div class="a__item__img">
 							<img src="" alt="Anne Hathaway" />
 						</div>
@@ -255,7 +257,7 @@
 							<span class="pos">Lead Designer at Behance</span>
 						</div>
 					</div>
-					<div class="a__item bottom">
+					<div class="a__item bottom clearfix">
 						<div class="a__item__img">
 							<img src="" alt="Emma Stone" />
 						</div>
@@ -265,7 +267,117 @@
 							<span class="pos">Co-Founder of Shazam</span>
 						</div>
 					</div>
-				</div>	
+				</div>
+				<div class="about__wrap__section">
+					<div class="a__item bottom clearfix">
+						<div class="a__item__img">
+							<img src="" alt="Anne Hathaway" />
+						</div>
+						<div class="a__item__text">
+							<p>"Nullam dapibus blandit orci, viverra gravida dui lobortis eget. Macarena fringila urna did moroz"</p>
+							<p class="person">Anne Hathaway</p>
+							<span class="pos">Lead Designer at Behance</span>
+						</div>
+					</div>
+					<div class="a__item bottom clearfix">
+						<div class="a__item__img">
+							<img src="" alt="Emma Stone" />
+						</div>
+						<div class="a__item__text">
+							<p>"Nullam dapibus blandit orci, viverra gravida dui lobortis eget. Macarena fringila urna did moroz"</p>
+							<p class="person">EMMA STONE</p>
+							<span class="pos">Co-Founder of Shazam</span>
+						</div>
+					</div>				
+				</div>
+				<div class="about__wrap__section">
+					<div class="a__item bottom clearfix">
+						<div class="a__item__img">
+							<img src="" alt="Anne Hathaway" />
+						</div>
+						<div class="a__item__text">
+							<p>"Nullam dapibus blandit orci, viverra gravida dui lobortis eget. Macarena fringila urna did moroz"</p>
+							<p class="person">Anne Hathaway</p>
+							<span class="pos">Lead Designer at Behance</span>
+						</div>
+					</div>
+					<div class="a__item bottom clearfix">
+						<div class="a__item__img">
+							<img src="" alt="Emma Stone" />
+						</div>
+						<div class="a__item__text">
+							<p>"Nullam dapibus blandit orci, viverra gravida dui lobortis eget. Macarena fringila urna did moroz"</p>
+							<p class="person">EMMA STONE</p>
+							<span class="pos">Co-Founder of Shazam</span>
+						</div>
+					</div>				
+				</div>
+				<div class="about__wrap__section">
+					<div class="a__item bottom clearfix">
+						<div class="a__item__img">
+							<img src="" alt="Anne Hathaway" />
+						</div>
+						<div class="a__item__text">
+							<p>"Nullam dapibus blandit orci, viverra gravida dui lobortis eget. Macarena fringila urna did moroz"</p>
+							<p class="person">Anne Hathaway</p>
+							<span class="pos">Lead Designer at Behance</span>
+						</div>
+					</div>
+					<div class="a__item bottom clearfix">
+						<div class="a__item__img">
+							<img src="" alt="Emma Stone" />
+						</div>
+						<div class="a__item__text">
+							<p>"Nullam dapibus blandit orci, viverra gravida dui lobortis eget. Macarena fringila urna did moroz"</p>
+							<p class="person">EMMA STONE</p>
+							<span class="pos">Co-Founder of Shazam</span>
+						</div>
+					</div>				
+				</div>
+				<div class="about__wrap__section">
+					<div class="a__item bottom clearfix">
+						<div class="a__item__img">
+							<img src="" alt="Anne Hathaway" />
+						</div>
+						<div class="a__item__text">
+							<p>"Nullam dapibus blandit orci, viverra gravida dui lobortis eget. Macarena fringila urna did moroz"</p>
+							<p class="person">Anne Hathaway</p>
+							<span class="pos">Lead Designer at Behance</span>
+						</div>
+					</div>
+					<div class="a__item bottom clearfix">
+						<div class="a__item__img">
+							<img src="" alt="Emma Stone" />
+						</div>
+						<div class="a__item__text">
+							<p>"Nullam dapibus blandit orci, viverra gravida dui lobortis eget. Macarena fringila urna did moroz"</p>
+							<p class="person">EMMA STONE</p>
+							<span class="pos">Co-Founder of Shazam</span>
+						</div>
+					</div>				
+				</div>
+				<div class="about__wrap__section">
+					<div class="a__item bottom clearfix">
+						<div class="a__item__img">
+							<img src="" alt="Anne Hathaway" />
+						</div>
+						<div class="a__item__text">
+							<p>"Nullam dapibus blandit orci, viverra gravida dui lobortis eget. Macarena fringila urna did moroz"</p>
+							<p class="person">Anne Hathaway</p>
+							<span class="pos">Lead Designer at Behance</span>
+						</div>
+					</div>
+					<div class="a__item bottom clearfix">
+						<div class="a__item__img">
+							<img src="" alt="Emma Stone" />
+						</div>
+						<div class="a__item__text">
+							<p>"Nullam dapibus blandit orci, viverra gravida dui lobortis eget. Macarena fringila urna did moroz"</p>
+							<p class="person">EMMA STONE</p>
+							<span class="pos">Co-Founder of Shazam</span>
+						</div>
+					</div>				
+				</div>																	
 			</div>
 			</div>
 		</div>
@@ -292,7 +404,8 @@
 
 							<!-- Footer -->
 		<div id="footer">
-			<div class="footer__nav clearfix">
+			<div class="container">
+				<div class="footer__nav clearfix">
 					<a href="">Facebook</a>
 					<a href="">Twitter</a>
 					<a href="">Google+</a>
@@ -300,6 +413,7 @@
 					<a href="">Behance</a>
 					<a href="">Dribble</a>
 					<a href="">Github</a>
+				</div>
 			</div>
 		</div>							
 	</div>

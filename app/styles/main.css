@@ -244,65 +244,123 @@ a:hover {
   }
 }
 /*Header*/
-header {
+#header {
   position: absolute;
   width: 100%;
   top: 20px;
 }
-header .logo {
+#header .logo {
   float: left;
 }
-header .logo .logo__image {
+#header .logo .logo__image {
   display: block;
 }
 @media only screen and (max-width:959px) {
-  header .logo .logo__image {
+  #header .logo .logo__image {
     width: 90%;
   }
 }
-header .nav {
-  padding-top: 13px;
+#header.header-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 0 10px;
+  background-color: #87509c;
+  opacity: 0.9;
+}
+#header .header__menu {
+  display: none;
+  float: right;
+  color: white;
+  font: 15px/15px 'Titillium Web', arial, sans-serif;
+  text-transform: uppercase;
+  padding: 10px;
+}
+@media only screen and (max-width:568px) {
+  #header .header__menu {
+    display: block;
+    margin-top: 5px;
+  }
+  #header .header__menu:active {
+    background-color: #643a79;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+  }
+}
+#header .nav {
+  padding-top: 10px;
   float: right;
 }
-header .nav li {
-  margin-right: 30px;
+@media only screen and (max-width:568px) {
+  #header .nav {
+    display: none;
+    position: absolute;
+    padding-top: 0;
+    top: 100%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+  }
+}
+#header .nav li {
   float: left;
+  margin-right: 30px;
 }
 @media only screen and (max-width:959px) {
-  header .nav li {
+  #header .nav li {
     margin-right: 15px;
   }
 }
 @media only screen and (max-width:768px) {
-  header .nav li {
+  #header .nav li {
     margin-right: 10px;
   }
 }
-header .nav li:last-child {
+@media only screen and (max-width:568px) {
+  #header .nav li {
+    float: none;
+    margin-right: 0;
+    text-align: center;
+    background-color: #87509c;
+    opacity: 0.9px;
+  }
+}
+#header .nav li:last-child {
   margin-right: 0;
 }
-header .nav li a {
+#header .nav li a {
   display: block;
   padding: 5px 10px;
   font: 16px/16px 'Titillium Web', arial, sans-serif;
   color: #fff;
   text-transform: uppercase;
 }
-header .nav li a:hover {
+#header .nav li a:hover {
   background-color: #643a79;
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
+@media only screen and (max-width:568px) {
+  #header .nav li a:hover {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+}
 @media only screen and (max-width:959px) {
-  header .nav li a {
+  #header .nav li a {
     font: 15px/15px 'Titillium Web', arial, sans-serif;
     padding: 4px 8px;
   }
 }
 @media only screen and (max-width:768px) {
-  header .nav li a {
+  #header .nav li a {
     font: 14px/14px 'Titillium Web', arial, sans-serif;
     padding: 4px 8px;
+  }
+}
+@media only screen and (max-width:568px) {
+  #header .nav li a {
+    padding: 15px;
   }
 }
 /*Home Block*/
@@ -1244,12 +1302,12 @@ header .nav li a:hover {
     margin-bottom: 30px;
   }
 }
-#about .about__wrap {
+#about .about__wrap__section {
   width: 100%;
   text-align: justify;
   font-size: 0.1px;
 }
-#about .about__wrap:after {
+#about .about__wrap__section:after {
   content: '';
   width: 100%;
   display: inline-block;
@@ -1259,19 +1317,7 @@ header .nav li a:hover {
   vertical-align: top;
   display: inline-block;
   text-align: center;
-}
-#about .about__wrap .a__item.bottom {
-  margin-top: 120px;
-}
-@media only screen and (max-width:959px) {
-  #about .about__wrap .a__item.bottom {
-    margin-top: 100px;
-  }
-}
-@media only screen and (max-width:768px) {
-  #about .about__wrap .a__item.bottom {
-    margin-top: 80px;
-  }
+  padding: 5px;
 }
 @media only screen and (max-width:568px) {
   #about .about__wrap .a__item {
@@ -1557,26 +1603,59 @@ header .nav li a:hover {
 }
 /*Footer*/
 #footer {
-  padding: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: #c7d6d6;
   text-align: center;
 }
-#footer a {
-  margin-right: 40px;
+@media only screen and (max-width:768px) {
+  #footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+@media only screen and (max-width:568px) {
+  #footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+#footer .footer__nav {
+  width: 100%;
+  text-align: justify;
+  font-size: 0.1px;
+}
+#footer .footer__nav:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+#footer .footer__nav a {
+  padding: 5px;
+  display: inline-block;
   color: #273a71;
   font: 600 24px/30px 'Titillium Web', arial, sans-serif;
 }
 @media only screen and (max-width:959px) {
-  #footer a {
-    margin-right: 23px;
+  #footer .footer__nav a {
     font: 600 21px/25px 'Titillium Web', arial, sans-serif;
   }
 }
 @media only screen and (max-width:768px) {
+  #footer .footer__nav a {
+    font: 600 18px/22px 'Titillium Web', arial, sans-serif;
+  }
 }
-#footer a:hover {
+@media only screen and (max-width:568px) {
+  #footer .footer__nav a {
+    font: 600 16px/20px 'Titillium Web', arial, sans-serif;
+  }
+}
+#footer .footer__nav a:hover {
   color: #30bae9;
 }
-#footer a:last-child {
-  margin-right: 0;
+#footer .footer__nav a:active {
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
 }

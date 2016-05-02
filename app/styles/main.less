@@ -153,7 +153,7 @@ a, a:hover{text-decoration: none;}
 
 
 									/*Header*/
-header{
+#header{
 	position:absolute;
 	width:100%;
 	top:20px;
@@ -166,10 +166,45 @@ header{
 				}
 			}
 		}
-		.nav{ /// change on mobile portrait
-			padding-top:13px;
-			.right();	
+	&.header-fixed{
+		position:fixed;
+		top:0;
+		width:100%;
+		padding: 10px 0 10px;
+		background-color: #87509c;
+		opacity:0.9;
+	}
+	.header__menu {
+		display: none;
+		float:right;
+		color:white;
+		font: 15px/15px 'Titillium Web', arial, sans-serif;
+		text-transform: uppercase;
+		padding: 10px;
+		@media @mobilePortrait{
+			display:block;
+			margin-top: 5px;
+			&:active{
+			background-color: #643a79;
+			border-radius: 4px;
+			}
+		}	
+	}
+		.nav{
+		 /// change on mobile portrait
+			padding-top:10px;
+			float:right;
+			@media @mobilePortrait{
+					display:none;
+					position:absolute;
+					padding-top:0;
+					top:100%;
+					right:0;
+					left:0;
+					opacity: 0.9;
+				}	
 			li{
+				float:left;
 				margin-right:30px;
 				@media @tabletLarge{
 					margin-right:15px;
@@ -177,10 +212,14 @@ header{
 				@media @tablet {
 					margin-right:10px;
 				}
-				&:last-child{
+				@media @mobilePortrait{
+					float:none;
 					margin-right:0;
+					text-align: center;
+					background-color: #87509c;
+					opacity:0.9px;
 				}
-				.left();
+				&:last-child{margin-right:0;}
 				a{
 					display: block;
 					padding: 5px 10px;
@@ -190,6 +229,7 @@ header{
 					&:hover{
 						background-color: #643a79;
 						border-radius: 4px;
+						@media @mobilePortrait{border-radius: 0;}
 					}
 					@media @tabletLarge{
 						font: 15px/15px 'Titillium Web', arial, sans-serif;
@@ -199,6 +239,7 @@ header{
 						font: 14px/14px 'Titillium Web', arial, sans-serif;
 						padding: 4px 8px;
 					}
+					@media @mobilePortrait{padding: 15px;}
 				}
 			}
 		}
@@ -677,6 +718,7 @@ header{
 }	
 
 /*About block*/
+
 #about{
 	background-color: #d74680;
 	color:@textMainColor;
@@ -692,30 +734,33 @@ header{
 		.descrs();
 	}	
 	.about__wrap{
-		width:100%;		
-		text-align: justify;
-		font-size: 0.1px;
-		&:after{
-			content:'';
-			width:100%;
-			display: inline-block;
+		&__section{
+			width:100%;		
+			text-align: justify;
+			font-size: 0.1px;
+			&:after{
+				content:'';
+				width:100%;
+				display: inline-block;
+			}
 		}
 		.a__item{
 			width: @wrapped2ItemsWidth;
 			vertical-align: top;
 			display: inline-block;
 			text-align: center;
+			padding:5px;
 			&.bottom{
-				margin-top: 120px;
+				//margin-top: 120px;
 			}
 			@media @tabletLarge {
 				&.bottom{
-					margin-top: 100px;
+					//margin-top: 100px;
 				}
 			}
 			@media @tablet {
 				&.bottom{
-					margin-top: 80px;
+					//margin-top: 80px;
 				}
 			}
 			@media @mobilePortrait{
@@ -897,27 +942,49 @@ header{
 
 								/*Footer*/
 #footer{
-	padding:40px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 	background-color: #c7d6d6;
 	text-align: center;
-
+	@media @tablet{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	}
+	@media @mobilePortrait{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	}
+	.footer__nav{
+	width:100%;		
+	text-align: justify;
+	font-size: 0.1px;
+		&:after{
+			content:'';
+			width:100%;
+			display: inline-block;
+		}
 	a{
-		margin-right:40px;
+		padding:5px;
+		display: inline-block;
 		color: #273a71;
 		font: 600 24px/30px 'Titillium Web', arial, sans-serif;
-		@media @tabletLarge{
-			margin-right:23px;
+		@media @tabletLarge{	
 			font: 600 21px/25px 'Titillium Web', arial, sans-serif;
 		}
 		@media @tablet{
-			//icons paste!!!!
+			font: 600 18px/22px 'Titillium Web', arial, sans-serif;
 		}
+		@media @mobilePortrait{
+			font: 600 16px/20px 'Titillium Web', arial, sans-serif;
+		}		
 		&:hover{
 			color: #30bae9;
 		}
-		&:last-child{
-			margin-right: 0;
+		&:active{
+			background-color: rgba(0,0,0,0.4);
+			border-radius:4px;
 		}
+	}
 	}
 }
 
