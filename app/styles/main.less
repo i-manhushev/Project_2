@@ -66,7 +66,7 @@ a, a:hover{text-decoration: none;}
 // media queries
 
 @mobile: ~"only screen and (max-width:359px)";
-@mobilePortrait: ~"only screen and (max-width:568px)";
+@mobileLandscape: ~"only screen and (max-width:568px)";
 @tablet:   ~"only screen and (max-width:768px)";
 @tabletLarge: ~"only screen and (max-width:959px)";
 @desktop: ~"only screen and (max-width:1139px)";
@@ -92,7 +92,7 @@ a, a:hover{text-decoration: none;}
 	@media @tablet {
 		padding: 80px 0;
 	}
-	@media @mobilePortrait {
+	@media @mobileLandscape {
 		padding: 60px 0;
 	}
 
@@ -109,7 +109,7 @@ a, a:hover{text-decoration: none;}
 	@media @tablet {
 		font: 700 36px/36px 'Titillium Web', arial, sans-serif;
 	}
-	@media @mobilePortrait{
+	@media @mobileLandscape{
 		font: 700 34px/34px 'Titillium Web', arial, sans-serif;
 	}
 	@media @mobile{
@@ -139,7 +139,7 @@ a, a:hover{text-decoration: none;}
 		font: 18px/24px 'Titillium Web', arial, sans-serif;
 		margin-bottom: 50px;
 	}
-	@media @mobilePortrait {
+	@media @mobileLandscape {
 		font: 16px/22px 'Titillium Web', arial, sans-serif;
 		margin-bottom: 40px;
 	}
@@ -181,7 +181,7 @@ a, a:hover{text-decoration: none;}
 		font: 15px/15px 'Titillium Web', arial, sans-serif;
 		text-transform: uppercase;
 		padding: 10px;
-		@media @mobilePortrait{
+		@media @mobileLandscape{
 			display:block;
 			margin-top: 5px;
 			&:active{
@@ -194,7 +194,7 @@ a, a:hover{text-decoration: none;}
 		 /// change on mobile portrait
 			padding-top:10px;
 			float:right;
-			@media @mobilePortrait{
+			@media @mobileLandscape{
 					display:none;
 					position:absolute;
 					padding-top:0;
@@ -212,7 +212,7 @@ a, a:hover{text-decoration: none;}
 				@media @tablet {
 					margin-right:10px;
 				}
-				@media @mobilePortrait{
+				@media @mobileLandscape{
 					float:none;
 					margin-right:0;
 					text-align: center;
@@ -229,7 +229,7 @@ a, a:hover{text-decoration: none;}
 					&:hover{
 						background-color: #643a79;
 						border-radius: 4px;
-						@media @mobilePortrait{border-radius: 0;}
+						@media @mobileLandscape{border-radius: 0;}
 					}
 					@media @tabletLarge{
 						font: 15px/15px 'Titillium Web', arial, sans-serif;
@@ -239,7 +239,7 @@ a, a:hover{text-decoration: none;}
 						font: 14px/14px 'Titillium Web', arial, sans-serif;
 						padding: 4px 8px;
 					}
-					@media @mobilePortrait{padding: 15px;}
+					@media @mobileLandscape{padding: 15px;}
 				}
 			}
 		}
@@ -267,7 +267,7 @@ a, a:hover{text-decoration: none;}
 		@media @tablet {
 			font: bold 38px/42px 'Titillium Web', arial, sans-serif;
 		}
-		@media @mobilePortrait {
+		@media @mobileLandscape {
 			font: bold 36px/40px 'Titillium Web', arial, sans-serif;
 		}
 		@media @mobile {
@@ -293,7 +293,7 @@ a, a:hover{text-decoration: none;}
 			padding: 15px 50px;
 			margin-bottom: 90px;
 		}
-		@media @mobilePortrait {
+		@media @mobileLandscape {
 			padding: 15px 40px;
 			margin-bottom: 90px;
 		}
@@ -351,7 +351,7 @@ a, a:hover{text-decoration: none;}
 				@media @tablet{
 					margin-top: 45px;
 				}
-				@media @mobilePortrait{
+				@media @mobileLandscape{
 					font: 16px/16px 'Titillium Web', arial, sans-serif;
 					margin-top: 35px;
 				}
@@ -367,7 +367,7 @@ a, a:hover{text-decoration: none;}
 				@media @tablet{
 					margin-top: 15px;
 				}
-				@media @mobilePortrait{
+				@media @mobileLandscape{
 					font: 300 14px/16px 'Titillium Web', arial, sans-serif;
 					margin-top: 10px;
 				}
@@ -439,7 +439,7 @@ a, a:hover{text-decoration: none;}
 					width: 140px;
 					height:140px;
 				}
-				@media @mobilePortrait{
+				@media @mobileLandscape{
 					width: 120px;
 					height:120px;
 				}
@@ -459,7 +459,7 @@ a, a:hover{text-decoration: none;}
 				@media @tablet{
 					margin-top: 45px;
 				}
-				@media @mobilePortrait{
+				@media @mobileLandscape{
 					font: 700 16px/16px 'Titillium Web', arial, sans-serif;
 					margin-top: 35px;
 				}
@@ -473,7 +473,7 @@ a, a:hover{text-decoration: none;}
 					font: 400 14px/14px 'Titillium Web', arial, sans-serif;	
 					margin-top: 10px;
 				}
-				@media @mobilePortrait{
+				@media @mobileLandscape{
 					font: 400 13px/13px 'Titillium Web', arial, sans-serif;
 					
 				}
@@ -488,7 +488,7 @@ a, a:hover{text-decoration: none;}
 				@media @tablet{
 					margin-top: 15px;
 				}
-				@media @mobilePortrait{
+				@media @mobileLandscape{
 					font: 300 14px/16px 'Titillium Web', arial, sans-serif;
 					margin-top: 10px;
 				}
@@ -562,6 +562,24 @@ a, a:hover{text-decoration: none;}
 }
 
 /*Skills Block*/
+				@step:1;
+				@colorUnprogressed: #dfe8ed;
+				@loops: round(100/@step);
+				@increment: 360/@loops;
+				@half: round(@loops/2);
+				.loop(@i,@bg-color) when (@i<@loops) {
+					@class: @i*@step;
+					&.progress-@{class} when (@i < @half) {
+						@nextdeg: 90deg + (@increment* @i);
+						background-image: linear-gradient(90deg,#dfe8ed 50%, transparent 50%, transparent),
+						linear-gradient(@nextdeg, @bg-color 50%, #dfe8ed 50%, #dfe8ed);
+					}
+					&.progress-@{class} when (@i >= @half){
+						@nextdeg: -90deg + (@increment*(@i - @half));
+						background-image: linear-gradient(@nextdeg, @bg-color 50%, transparent 50%, transparent),
+						linear-gradient(270deg, @bg-color 50%, #dfe8ed 50%, #dfe8ed);
+					}
+				}
 
 #skills{
 	background-color: #fff;
@@ -586,31 +604,106 @@ a, a:hover{text-decoration: none;}
 			display: inline-block;
 		}
 		.sk__item{
-			outline: 1px solid red;
 			vertical-align: top;
 			width: @wrapped4ItemsWidth;
-			padding: 0 30px;
+			padding: 0 5px;
 			display: inline-block;
 			text-align: center;
-
-			@media @tablet {
-				&.bottom{
-					margin-top: 20px;
+			.progress-radial{
+				position:relative;
+				width:150px;
+				height:150px;
+				border-radius: 50%;
+				margin:0 auto;
+				border: 2px solid #dfe8ed;
+				@media @tabletLarge{
+					width:130px;
+					height:130px;	
 				}
-				width: @wrapped2ItemsWidth;
-				padding: 0 10px;
+				@media @tablet{
+					width:115px;
+					height:115px;	
+				}
+				@media @mobileLandscape{
+					width:85px;
+					height:85px;
+				}
+				@media only screen and (max-width:420px){
+					width:75px;
+					height:75px;
+				}
+				@media @mobile{
+					width:60px;
+					height:60px;
+				}
+
+				.overlay{
+					position: absolute;
+					width:120px;
+					height:120px;
+					background-color: #fff;
+					border-radius: 50%;
+					top:50%;
+					left:50%;
+					transform: translate(-50%, -50%);
+					text-align: center;
+					line-height: 120px;
+					font-size: 50px;
+					@media @tabletLarge{
+						width:100px;
+						height:100px;
+						line-height: 100px;
+						font-size: 40px;	
+					}
+					@media @tablet{
+						width:85px;
+						height:85px;
+						line-height: 85px;
+						font-size: 30px;	
+					}
+					@media @mobileLandscape{
+						width:65px;
+						height:65px;
+						line-height: 65px;
+						font-size: 20px;
+					}
+					@media only screen and (max-width:420px){
+						width:55px;
+						height:55px;
+						line-height: 55px;
+					}
+					@media @mobile{
+						width:40px;
+						height:40px;
+						line-height: 40px;
+						font-size: 15px;
+					}
+				}
+			.loop(90, #30bae7);
+			.loop(75, #d74680);
+			.loop(70, #15c7a8);
+			.loop(85, #eb7d4b);
 			}
+
+
 			&__title{
 				font: 700 18px/18px 'Titillium Web', arial, sans-serif;
 				text-transform: uppercase;
 				margin-top: 60px;
+				@media @tabletLarge{
+					margin-top: 50px;
+				}
 				@media @tablet{
 					margin-top: 45px;
 				}
-				@media @mobilePortrait{
+				@media @mobileLandscape{
 					font: 700 16px/16px 'Titillium Web', arial, sans-serif;
 					margin-top: 35px;
 				}
+				@media @mobile{
+					font: 700 13px/13px 'Titillium Web', arial, sans-serif;
+					margin-top: 20px;
+				}	
 			}			
 		}	
 	}
@@ -763,7 +856,7 @@ a, a:hover{text-decoration: none;}
 					//margin-top: 80px;
 				}
 			}
-			@media @mobilePortrait{
+			@media @mobileLandscape{
 				float:none;
 				width:100%;
 				margin-top:0;
@@ -819,7 +912,7 @@ a, a:hover{text-decoration: none;}
 						font: italic 17px/23px 'Titillium Web', arial, sans-serif;
 						margin-bottom: 5px;
 					}
-					@media @mobilePortrait{
+					@media @mobileLandscape{
 						font: italic 15px/20px 'Titillium Web', arial, sans-serif;
 						margin-bottom: 5px;
 					}
@@ -831,7 +924,7 @@ a, a:hover{text-decoration: none;}
 					@media @tablet{
 						font: 400 20px/22px 'Titillium Web', arial, sans-serif;
 					}
-					@media @mobilePortrait{
+					@media @mobileLandscape{
 						font: 400 18px/20px 'Titillium Web', arial, sans-serif;
 					}
 				}
@@ -841,7 +934,7 @@ a, a:hover{text-decoration: none;}
 					@media @tablet{
 						font: 400 16px/18px 'Titillium Web', arial, sans-serif;
 					}
-					@media @mobilePortrait{
+					@media @mobileLandscape{
 						font: 400 14px/16px 'Titillium Web', arial, sans-serif;
 					}
 				}
@@ -901,7 +994,7 @@ a, a:hover{text-decoration: none;}
 			background-color: #273a71;
 			border-radius: 4px;
 			color: @textMainColor;
-			@media @mobilePortrait{
+			@media @mobileLandscape{
 				float: none;
 				width: 100%;
 				height: 40px;
@@ -915,7 +1008,7 @@ a, a:hover{text-decoration: none;}
 			}
 			&[placeholder]{
 				font: 400 18px 'Titillium Web', arial, sans-serif;	
-				@media @mobilePortrait{
+				@media @mobileLandscape{
 					font: 400 16px 'Titillium Web', arial, sans-serif;	
 				}
 			}
@@ -932,7 +1025,7 @@ a, a:hover{text-decoration: none;}
 			color:@textMainColor;
 			&[placeholder]{
 				font: 400 18px/18px 'Titillium Web', arial, sans-serif;	
-				@media @mobilePortrait{
+				@media @mobileLandscape{
 					font: 400 16px/18px 'Titillium Web', arial, sans-serif;	
 				}
 			}
@@ -950,7 +1043,7 @@ a, a:hover{text-decoration: none;}
 	padding-top: 30px;
 	padding-bottom: 30px;
 	}
-	@media @mobilePortrait{
+	@media @mobileLandscape{
 	padding-top: 20px;
 	padding-bottom: 20px;
 	}
@@ -974,7 +1067,7 @@ a, a:hover{text-decoration: none;}
 		@media @tablet{
 			font: 600 18px/22px 'Titillium Web', arial, sans-serif;
 		}
-		@media @mobilePortrait{
+		@media @mobileLandscape{
 			font: 600 16px/20px 'Titillium Web', arial, sans-serif;
 		}		
 		&:hover{

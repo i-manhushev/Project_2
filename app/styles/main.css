@@ -994,26 +994,132 @@ a:hover {
   display: inline-block;
 }
 #skills .skills__wrap .sk__item {
-  outline: 1px solid red;
   vertical-align: top;
   width: 22.80701754%;
-  padding: 0 30px;
+  padding: 0 5px;
   display: inline-block;
   text-align: center;
 }
+#skills .skills__wrap .sk__item .progress-radial {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 2px solid #dfe8ed;
+}
+@media only screen and (max-width:959px) {
+  #skills .skills__wrap .sk__item .progress-radial {
+    width: 130px;
+    height: 130px;
+  }
+}
 @media only screen and (max-width:768px) {
-  #skills .skills__wrap .sk__item {
-    width: 47.36842105%;
-    padding: 0 10px;
+  #skills .skills__wrap .sk__item .progress-radial {
+    width: 115px;
+    height: 115px;
   }
-  #skills .skills__wrap .sk__item.bottom {
-    margin-top: 20px;
+}
+@media only screen and (max-width:568px) {
+  #skills .skills__wrap .sk__item .progress-radial {
+    width: 85px;
+    height: 85px;
   }
+}
+@media only screen and (max-width: 420px) {
+  #skills .skills__wrap .sk__item .progress-radial {
+    width: 75px;
+    height: 75px;
+  }
+}
+@media only screen and (max-width:359px) {
+  #skills .skills__wrap .sk__item .progress-radial {
+    width: 60px;
+    height: 60px;
+  }
+}
+#skills .skills__wrap .sk__item .progress-radial .overlay {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 120px;
+  font-size: 50px;
+}
+@media only screen and (max-width:959px) {
+  #skills .skills__wrap .sk__item .progress-radial .overlay {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width:768px) {
+  #skills .skills__wrap .sk__item .progress-radial .overlay {
+    width: 85px;
+    height: 85px;
+    line-height: 85px;
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width:568px) {
+  #skills .skills__wrap .sk__item .progress-radial .overlay {
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  #skills .skills__wrap .sk__item .progress-radial .overlay {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+}
+@media only screen and (max-width:359px) {
+  #skills .skills__wrap .sk__item .progress-radial .overlay {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+  }
+}
+#skills .skills__wrap .sk__item .progress-radial.progress-90 {
+  background-image: -webkit-linear-gradient(36deg, #30bae7 50%, transparent 50%, transparent), -webkit-linear-gradient(right, #30bae7 50%, #dfe8ed 50%, #dfe8ed);
+  background-image: linear-gradient(54deg, #30bae7 50%, transparent 50%, transparent), linear-gradient(270deg, #30bae7 50%, #dfe8ed 50%, #dfe8ed);
+}
+#skills .skills__wrap .sk__item .progress-radial.progress-75 {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d74680), color-stop(50%, transparent), color-stop(50%, transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #d74680), color-stop(50%, #dfe8ed), color-stop(50%, #dfe8ed));
+  background-image: -webkit-linear-gradient(bottom, #d74680 50%, transparent 50%, transparent), -webkit-linear-gradient(right, #d74680 50%, #dfe8ed 50%, #dfe8ed);
+  background-image: linear-gradient(0deg, #d74680 50%, transparent 50%, transparent), linear-gradient(270deg, #d74680 50%, #dfe8ed 50%, #dfe8ed);
+}
+#skills .skills__wrap .sk__item .progress-radial.progress-70 {
+  background-image: -webkit-linear-gradient(108deg, #15c7a8 50%, transparent 50%, transparent), -webkit-linear-gradient(right, #15c7a8 50%, #dfe8ed 50%, #dfe8ed);
+  background-image: linear-gradient(-18deg, #15c7a8 50%, transparent 50%, transparent), linear-gradient(270deg, #15c7a8 50%, #dfe8ed 50%, #dfe8ed);
+}
+#skills .skills__wrap .sk__item .progress-radial.progress-85 {
+  background-image: -webkit-linear-gradient(54deg, #eb7d4b 50%, transparent 50%, transparent), -webkit-linear-gradient(right, #eb7d4b 50%, #dfe8ed 50%, #dfe8ed);
+  background-image: linear-gradient(36deg, #eb7d4b 50%, transparent 50%, transparent), linear-gradient(270deg, #eb7d4b 50%, #dfe8ed 50%, #dfe8ed);
 }
 #skills .skills__wrap .sk__item__title {
   font: 700 18px/18px 'Titillium Web', arial, sans-serif;
   text-transform: uppercase;
   margin-top: 60px;
+}
+@media only screen and (max-width:959px) {
+  #skills .skills__wrap .sk__item__title {
+    margin-top: 50px;
+  }
 }
 @media only screen and (max-width:768px) {
   #skills .skills__wrap .sk__item__title {
@@ -1024,6 +1130,12 @@ a:hover {
   #skills .skills__wrap .sk__item__title {
     font: 700 16px/16px 'Titillium Web', arial, sans-serif;
     margin-top: 35px;
+  }
+}
+@media only screen and (max-width:359px) {
+  #skills .skills__wrap .sk__item__title {
+    font: 700 13px/13px 'Titillium Web', arial, sans-serif;
+    margin-top: 20px;
   }
 }
 /*Portfolio block*/

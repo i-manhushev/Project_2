@@ -5,9 +5,11 @@ $(document).ready(function(){
 	var menuShow = false;
 	var menuButton = $('.header__menu');
 	var navList = $('.nav');
+	var big_screen = true;
 
 	  // fixed header on scroll
 	$(window).on("scroll", function() {
+
   	if ($(this).scrollTop() > 20) {
     	header.addClass("header-fixed");
   	} else {
@@ -21,11 +23,13 @@ $(document).ready(function(){
  		if (!menuShow) {
 			navList.slideDown();
 			menuButton.text('Hide menu');
-			$('.nav a').on('click', function(){
+			$('.nav a').on('click', function(e){
+				e.preventDefault()
 				navList.slideUp();
 				menuButton.text('menu');
 				menuShow = false;
 			});
+
 			$(document).bind('mouseup',function(e){
 				e.stopPropagation;
     	if (!navList.is(e.target) // if the target of the click isn't the container...
@@ -52,7 +56,7 @@ $(document).ready(function(){
 		if(wid > 568) {
 		  navList.removeAttr('style');
 		  menuButton.text('menu');
-		  menuShow = false;
+		  menuShow = false;  
 		}
 	});
 			
