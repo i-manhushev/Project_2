@@ -245,6 +245,7 @@ a:hover {
 }
 /*Header*/
 #header {
+  z-index: 1;
   position: absolute;
   width: 100%;
   top: 20px;
@@ -1009,6 +1010,23 @@ a:hover {
   margin: 0 auto;
   border: 2px solid #dfe8ed;
 }
+#skills .skills__wrap .sk__item .progress-radial.progress-90 {
+  background-image: -webkit-linear-gradient(36deg, #30bae7 50%, transparent 50%, transparent), -webkit-linear-gradient(right, #30bae7 50%, #dfe8ed 50%, #dfe8ed);
+  background-image: linear-gradient(54deg, #30bae7 50%, transparent 50%, transparent), linear-gradient(270deg, #30bae7 50%, #dfe8ed 50%, #dfe8ed);
+}
+#skills .skills__wrap .sk__item .progress-radial.progress-75 {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d74680), color-stop(50%, transparent), color-stop(50%, transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #d74680), color-stop(50%, #dfe8ed), color-stop(50%, #dfe8ed));
+  background-image: -webkit-linear-gradient(bottom, #d74680 50%, transparent 50%, transparent), -webkit-linear-gradient(right, #d74680 50%, #dfe8ed 50%, #dfe8ed);
+  background-image: linear-gradient(0deg, #d74680 50%, transparent 50%, transparent), linear-gradient(270deg, #d74680 50%, #dfe8ed 50%, #dfe8ed);
+}
+#skills .skills__wrap .sk__item .progress-radial.progress-70 {
+  background-image: -webkit-linear-gradient(108deg, #15c7a8 50%, transparent 50%, transparent), -webkit-linear-gradient(right, #15c7a8 50%, #dfe8ed 50%, #dfe8ed);
+  background-image: linear-gradient(-18deg, #15c7a8 50%, transparent 50%, transparent), linear-gradient(270deg, #15c7a8 50%, #dfe8ed 50%, #dfe8ed);
+}
+#skills .skills__wrap .sk__item .progress-radial.progress-85 {
+  background-image: -webkit-linear-gradient(54deg, #eb7d4b 50%, transparent 50%, transparent), -webkit-linear-gradient(right, #eb7d4b 50%, #dfe8ed 50%, #dfe8ed);
+  background-image: linear-gradient(36deg, #eb7d4b 50%, transparent 50%, transparent), linear-gradient(270deg, #eb7d4b 50%, #dfe8ed 50%, #dfe8ed);
+}
 @media only screen and (max-width:959px) {
   #skills .skills__wrap .sk__item .progress-radial {
     width: 130px;
@@ -1093,23 +1111,6 @@ a:hover {
     line-height: 40px;
     font-size: 15px;
   }
-}
-#skills .skills__wrap .sk__item .progress-radial.progress-90 {
-  background-image: -webkit-linear-gradient(36deg, #30bae7 50%, transparent 50%, transparent), -webkit-linear-gradient(right, #30bae7 50%, #dfe8ed 50%, #dfe8ed);
-  background-image: linear-gradient(54deg, #30bae7 50%, transparent 50%, transparent), linear-gradient(270deg, #30bae7 50%, #dfe8ed 50%, #dfe8ed);
-}
-#skills .skills__wrap .sk__item .progress-radial.progress-75 {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d74680), color-stop(50%, transparent), color-stop(50%, transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #d74680), color-stop(50%, #dfe8ed), color-stop(50%, #dfe8ed));
-  background-image: -webkit-linear-gradient(bottom, #d74680 50%, transparent 50%, transparent), -webkit-linear-gradient(right, #d74680 50%, #dfe8ed 50%, #dfe8ed);
-  background-image: linear-gradient(0deg, #d74680 50%, transparent 50%, transparent), linear-gradient(270deg, #d74680 50%, #dfe8ed 50%, #dfe8ed);
-}
-#skills .skills__wrap .sk__item .progress-radial.progress-70 {
-  background-image: -webkit-linear-gradient(108deg, #15c7a8 50%, transparent 50%, transparent), -webkit-linear-gradient(right, #15c7a8 50%, #dfe8ed 50%, #dfe8ed);
-  background-image: linear-gradient(-18deg, #15c7a8 50%, transparent 50%, transparent), linear-gradient(270deg, #15c7a8 50%, #dfe8ed 50%, #dfe8ed);
-}
-#skills .skills__wrap .sk__item .progress-radial.progress-85 {
-  background-image: -webkit-linear-gradient(54deg, #eb7d4b 50%, transparent 50%, transparent), -webkit-linear-gradient(right, #eb7d4b 50%, #dfe8ed 50%, #dfe8ed);
-  background-image: linear-gradient(36deg, #eb7d4b 50%, transparent 50%, transparent), linear-gradient(270deg, #eb7d4b 50%, #dfe8ed 50%, #dfe8ed);
 }
 #skills .skills__wrap .sk__item__title {
   font: 700 18px/18px 'Titillium Web', arial, sans-serif;
