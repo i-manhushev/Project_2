@@ -1,15 +1,13 @@
 $(document).ready(function(){
 
-		// selectors' variables
+// selectors' variables
 	var header = $("#header");
-	var menuShow = false;
 	var menuButton = $('.header__menu');
 	var navList = $('.nav');
-	var big_screen = true;
+	var menuShow = false;
 
-	  // fixed header on scroll
+// fixed header on scroll
 	$(window).on("scroll", function() {
-
   	if ($(this).scrollTop() > 20) {
     	header.addClass("header-fixed");
   	} else {
@@ -17,20 +15,23 @@ $(document).ready(function(){
     } 
 	});
 
-		//clickable menu
+
+/*clickable menu for small screens*/
  	menuButton.on('click', function(e){
  		e.preventDefault();
  		if (!menuShow) {
 			navList.slideDown();
 			menuButton.text('Hide menu');
-			$('.nav a').on('click', function(e){
+			menuShow = true;
+// works on small screen, off on > 568			
+			$('.nav a').on('click.my', function(e){
 				e.preventDefault()
 				navList.slideUp();
 				menuButton.text('menu');
 				menuShow = false;
 			});
-
-			$(document).bind('mouseup',function(e){
+// works on small screen, off on > 568
+			$(document).on('mouseup',function(e){
 				e.stopPropagation;
     	if (!navList.is(e.target) // if the target of the click isn't the container...
         && navList.has(e.target).length === 0 // ... nor a descendant of the container
@@ -39,26 +40,39 @@ $(document).ready(function(){
         navList.slideUp();
         menuButton.text('menu');
     		menuShow = false;
-    		$(document).unbind('mouseup');  
     		}
     	});
-			menuShow = true;
+// works on small screen, off on > 568
+    	$(window).on("scroll.my", function() {
+				navList.slideUp();
+				menuButton.text('menu');
+				menuShow = false;
+			});
+
 		} else {
 			navList.slideUp();
 			menuButton.text('menu');
 			menuShow = false;
 			}
 	 });
+/*clickable menu for small screens*/
 
-   // restore styles after resize
+
+/*restore styles after resize*/
  	$(window).resize(function(){
 		var wid = $(window).width();
-		if(wid > 568) {
+		if(wid > 568) { 
 		  navList.removeAttr('style');
 		  menuButton.text('menu');
-		  menuShow = false;  
+		  menuShow = false; 
+// turning off events that work on small screens
+		  $(window).off("scroll.my");
+			$('.nav a').off('click.my');
+			$(document).off('mouseup');  
 		}
 	});
+/*restore styles after resize*/
+
 			
 // smooth scroll 
   $(".nav li a").on('click', function(event) {

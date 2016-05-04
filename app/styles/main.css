@@ -1008,7 +1008,6 @@ a:hover {
   -webkit-border-radius: 50%;
   border-radius: 50%;
   margin: 0 auto;
-  border: 2px solid #dfe8ed;
 }
 #skills .skills__wrap .sk__item .progress-radial.progress-90 {
   background-image: -webkit-linear-gradient(36deg, #30bae7 50%, transparent 50%, transparent), -webkit-linear-gradient(right, #30bae7 50%, #dfe8ed 50%, #dfe8ed);
