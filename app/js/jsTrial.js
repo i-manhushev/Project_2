@@ -90,4 +90,20 @@ $(document).ready(function(){
     });
   });
 
+  //slick slider 
+  $('.about__wrap').slick({
+  	arrows:false,
+  	dots: false,
+  	autoplay:true,
+  	cssEase: "ease-in-out"
+  });
+
 });
+
+
+
+
+
+
+
+

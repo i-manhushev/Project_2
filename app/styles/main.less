@@ -154,7 +154,7 @@ a, a:hover{text-decoration: none;}
 
 									/*Header*/
 #header{
-	z-index:1;
+	z-index:5;
 	position:absolute;
 	width:100%;
 	top:20px;
@@ -172,8 +172,7 @@ a, a:hover{text-decoration: none;}
 		top:0;
 		width:100%;
 		padding: 10px 0 10px;
-		background-color: #87509c;
-		opacity:0.9;
+		background-color: rgba(135,80,156,0.8);
 	}
 	.header__menu {
 		display: none;
@@ -815,6 +814,7 @@ a, a:hover{text-decoration: none;}
 /*About block*/
 
 #about{
+	position:relative;
 	background-color: #d74680;
 	color:@textMainColor;
 	.paddingSection();
@@ -828,6 +828,7 @@ a, a:hover{text-decoration: none;}
 	.descr{
 		.descrs();
 	}	
+
 	.about__wrap{
 		&__section{
 			width:100%;		
