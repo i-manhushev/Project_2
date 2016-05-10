@@ -184,12 +184,33 @@
 				<h2 class="title">Our Portfolio</h2>
 				<p class="descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, veniam?</p>
 				<ul class="portfolio__nav clearfix">
-					<li><a href="#">All</a></li>
-					<li><a href="#">Web</a></li>
-					<li><a href="#">Apps</a></li>
-					<li><a href="#">Icons</a></li>
+					<li><a href="#all">All</a></li>
+					<li><a href="#web" class="activeLink">Web</a></li>
+					<li><a href="#apps">Apps</a></li>
+					<li><a href="#icons">Icons</a></li>
 				</ul>	
-				<div class="portfolio__wrap clearfix">
+<!-- all -->
+				<div id="all" class="portfolio__wrap clearfix">
+				<div class="allTabsConfigs">
+					<input type="radio" name="tab" id="one" checked="checked">
+					<label for="one" class="one">SPA</label>
+					<input type="radio" name="tab" id="two">
+					<label for="two" class="two">E-Commerce</label>
+					<input type="radio" name="tab" id="three">
+					<label for="three" class="three">SaaS</label>
+					<input type="radio" name="tab" id="four">
+					<label for="four" class="four">PaaS</label>
+					<input type="radio" name="tab" id="five">
+					<label for="five" class="five">Miscellanous</label>
+						<div class="firstBlock">afdadf</div>
+						<div class="secondBlock">kjh;l</div>
+						<div class="thirdBlock">kl;</div>
+						<div class="forthBlock">pojn</div>
+						<div class="fifthBlock">adsf</div>
+				</div>
+				</div>
+<!-- web -->
+				<div id="web" class="portfolio__wrap inlineJustification activeSection clearfix">
 					<div class="p__item">
 						<a href="#">
 							<img src="images/p-item1.png" alt="" />
@@ -215,7 +236,17 @@
 						<h5 class = "p__item__title">Blog / Magazine Flat UI Kit</h5>
 					</div>															
 				</div>
-				<button class="portfolio__button">Load more projects!</button>			
+<!-- apps -->
+
+				<div id="apps" class="portfolio__wrap clearfix">
+				one two three
+				</div>
+<!-- icons -->
+				<div id="icons" class="portfolio__wrap clearfix">
+				one two three
+				</div>
+
+				<button class="portfolio__button">Load more projects!</button>	
 			</div>
 		</div>
 

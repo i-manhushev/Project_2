@@ -731,8 +731,8 @@ a, a:hover{text-decoration: none;}
 		}
 	}	
 	.portfolio__nav{
-		display: inline-block; // think how to center with nav remaining block;
-		margin: 0 auto 70px; // center the navigation
+		display: inline-block; 
+		margin: 0 auto 70px; 
 		@media @tablet{
 			margin-bottom: 50px;
 		}
@@ -750,6 +750,14 @@ a, a:hover{text-decoration: none;}
 				color: #000;
 				text-transform: uppercase;
 				border-radius: 4px;
+				&.activeLink{
+					background-color:transparent;
+					cursor:default;
+					&:hover{
+						background-color:transparent;
+					}
+				}
+
 				@media @tablet{
 					font: 14px/14px 'Titillium Web', arial, sans-serif;
 					padding: 4px 8px;
@@ -761,14 +769,78 @@ a, a:hover{text-decoration: none;}
 		}
 	}
 	.portfolio__wrap{
-		width:100%;		
-		text-align: justify;
-		font-size: 0.1px;
-		&:after{
-			content:'';
-			width:100%;
-			display: inline-block;
+		display:none;
+		.inlineJustification{
+			width:100%;		
+			text-align: justify;
+			font-size: 0.1px;
+			&:after{
+				content:'';
+				width:100%;
+				display: inline-block;
+			}
 		}
+		&.activeSection{
+			display:block;
+		}
+		.allTabsConfigs{
+			position:relative;
+
+			div, input{
+				display: none;
+				min-height: 400px;
+			}
+			div{
+				margin-right: 100px;
+			}
+			label{
+				position:absolute;
+				right:0;
+				top:0;
+				width:100px;
+				height:50px;
+				line-height: 50px;
+				text-align: center;
+				cursor:pointer;
+				border-top-right-radius:4px;
+				border-bottom-right-radius:4px;
+				background-color:#fd9;
+				&:hover{
+					background-color:#fff;;
+				}
+				&.two{
+					top:50px;
+					margin-bottom: 20px;
+				}
+				&.three{
+					top:100px;
+				}
+				&.four{
+					top:150px;
+				}
+				&.five{
+					top:200px;
+				}
+				}
+				input[type="radio"]:checked + label{
+					border-left:none;
+					border-right:5px solid #17c2a4;
+					background-color: #f8d795;
+				}
+				input#one:checked ~ .firstBlock,
+				input#two:checked ~ .secondBlock,
+				input#three:checked ~ .thirdBlock,
+				input#four:checked ~ .forthBlock,
+				input#five:checked ~ .fifthBlock {
+					display: block;
+					padding: 20px 120px 20px 20px;
+					background-color: rgba(0,0,0,0.03);
+
+				}
+
+			}
+
+		
 		.p__item{
 			vertical-align: top;
 			display: inline-block;
@@ -792,6 +864,7 @@ a, a:hover{text-decoration: none;}
 		}
 	}
 	.portfolio__button{
+		margin-top: 50px;
 		background-color: #17c2a4;
 		padding: 25px 80px;
 		color: #fd9;

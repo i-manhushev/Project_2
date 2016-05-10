@@ -98,6 +98,19 @@ $(document).ready(function(){
   	cssEase: "ease-in-out"
   });
 
+  //navigation for portrolio section;
+  $('.portfolio__nav li a').on('click', function(e){
+  	e.preventDefault();
+
+  	if($(this).hasClass('activeLink')) {
+  		return false;
+  	}
+  	var anchorId = $(this).attr('href').slice(1);
+  		 $('.portfolio__nav li a').removeClass('activeLink');
+  		 $(this).addClass('activeLink');
+  		 $('.portfolio__wrap').removeClass('activeSection');
+  		 $("#" + anchorId).addClass('activeSection');
+		});
 });
 
 
