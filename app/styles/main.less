@@ -25,6 +25,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: 'Titillium Web', arial, sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -285,6 +286,9 @@ a, a:hover{text-decoration: none;}
 		display: inline-block;
 		border-radius: 4px;
 		box-shadow: inset 0px -4px rgba(0,0,0,0.15);
+		&:active{
+			box-shadow: inset 0px -8px 10px rgba(0,0,0,0.15);
+		}
 		@media @tabletLarge{
 			margin-bottom: 100px;
 			padding: 20px 60px;
@@ -769,7 +773,11 @@ a, a:hover{text-decoration: none;}
 		}
 	}
 	.portfolio__wrap{
+		border-radius: 4px;
 		display:none;
+		&.activeSection{
+			display:block;
+		}
 		.inlineJustification{
 			width:100%;		
 			text-align: justify;
@@ -780,18 +788,104 @@ a, a:hover{text-decoration: none;}
 				display: inline-block;
 			}
 		}
-		&.activeSection{
-			display:block;
+		.apps__image{
+			width:400px;
+			margin: 0 auto 50px;
+			box-shadow: 0 0 20px 5px #17c2a4;
+			border-radius: 4px;
+			overflow: hidden;
+			@media @tablet{
+				width:350px;
+			}
+			@media @mobileLandscape{
+				width:300px;
+			}
+			@media @mobileLandscape{
+				width:250px;
+			}
+			img{
+				border-radius: 4px;
+				display:block;
+				width:100%;
+			}
 		}
+
+		// appBlock
+		.appBlock{
+			&__title{
+				position:relative;
+				font: 700 18px/18px 'Titillium Web', arial, sans-serif;
+				padding: 20px 20px;
+				text-align: left;
+				background: #ebcc8d;
+				cursor:pointer;
+				box-shadow: inset 0px -4px rgba(0,0,0,0.15);
+				&.first{
+					border-top-right-radius: 4px;
+					border-top-left-radius: 4px;
+				}
+				&.last{
+					border-bottom-right-radius: 4px;
+					border-bottom-left-radius: 4px;
+				}				
+				@media @mobileLandscape{
+					font: 700 16px/16px 'Titillium Web', arial, sans-serif;
+				}
+				&:after{
+					position:absolute;
+					top:50%;
+					right: 20px;
+					transform: translateY(-50%);
+					display: block;
+					text-align: center;
+					content: "+";
+					height:20px;
+					width:20px;
+					border-radius: 4px;
+					background-color:#fff;
+				}
+				&:hover:after{
+					background-color:#dfe8ed;
+				}
+				&:active{
+					box-shadow: inset 0px -8px 10px rgba(0,0,0,0.15);
+				}
+				&.active{
+					border-bottom-left-radius: 4px;
+					border-bottom-right-radius: 4px;
+					&:after{
+						content:"-";
+					}	
+				}
+			}
+			&__content{
+				display:none;
+				padding:20px 20px;
+				font: 16px/20px 'Titillium Web', arial, sans-serif;
+				@media @mobileLandscape{
+					font: 14px/16px 'Titillium Web', arial, sans-serif;
+					padding:10px 10px;
+				}
+				
+			}
+		}
+// all
 		.allTabsConfigs{
 			position:relative;
-
 			div, input{
 				display: none;
-				min-height: 400px;
+				min-height: 250px;
+				border-radius:4px 0 4px;
+				@media @tablet{
+					min-height: 200px;
+				}
 			}
 			div{
 				margin-right: 100px;
+				background-color: rgba(240,240,239,0.5);
+				@media @tablet{
+				margin-right: 80px;	
+				}
 			}
 			label{
 				position:absolute;
@@ -805,27 +899,44 @@ a, a:hover{text-decoration: none;}
 				border-top-right-radius:4px;
 				border-bottom-right-radius:4px;
 				background-color:#fd9;
+				@media @tablet{
+					width:80px;
+					height:40px;
+					line-height: 40px;
+					font-size: 13px;
+				}
 				&:hover{
 					background-color:#fff;;
 				}
 				&.two{
 					top:50px;
-					margin-bottom: 20px;
+					@media @tablet{
+						top:40px;
+					}
 				}
 				&.three{
 					top:100px;
+					@media @tablet{
+						top:80px;
+					}
 				}
 				&.four{
 					top:150px;
+					@media @tablet{
+						top:120px;
+					}
 				}
 				&.five{
 					top:200px;
+					@media @tablet{
+						top:160px;
+					}
 				}
 				}
 				input[type="radio"]:checked + label{
 					border-left:none;
 					border-right:5px solid #17c2a4;
-					background-color: #f8d795;
+					background-color: rgba(240,240,239,0.5);
 				}
 				input#one:checked ~ .firstBlock,
 				input#two:checked ~ .secondBlock,
@@ -834,13 +945,11 @@ a, a:hover{text-decoration: none;}
 				input#five:checked ~ .fifthBlock {
 					display: block;
 					padding: 20px 120px 20px 20px;
-					background-color: rgba(0,0,0,0.03);
 
 				}
-
 			}
 
-		
+	//general web-tab
 		.p__item{
 			vertical-align: top;
 			display: inline-block;
@@ -874,6 +983,9 @@ a, a:hover{text-decoration: none;}
 		display: inline-block;
 		border-radius: 4px;
 		box-shadow: inset 0px -4px rgba(0,0,0,0.15);
+		&:active{
+			box-shadow: inset 0px -8px 10px rgba(0,0,0,0.15);
+		}
 		@media @tabletLarge{
 			padding: 20px 50px;
 		}
@@ -1047,6 +1159,9 @@ a, a:hover{text-decoration: none;}
 		display: inline-block;
 		border-radius: 4px;
 		box-shadow: inset 0px -4px rgba(0,0,0,0.15);
+		&:active{
+			box-shadow: inset 0px -8px 10px rgba(0,0,0,0.15);
+		}
 		@media @tabletLarge{
 			padding: 20px 50px;
 		}
@@ -1059,29 +1174,67 @@ a, a:hover{text-decoration: none;}
 		margin: 0 auto;
 	}
 	.inputsInfo{
-		margin-bottom: 25px;
+		.form-group{
+			width: 100%;
+			&.inputsMessage{
+				margin-top: 25px;
+				@media @mobileLandscape{
+					margin-top:0;
+				}
+			}
+			span{
+				display:none;
+				&.wrong-info{
+					padding-top: 5px;
+					display:block;
+					color: #ff1919;
+					font-size:14px;
+					line-height:16px;
+				}
+			}
+			&:not(.inputsMessage){
+				float:left;
+				width:48%;
+				margin-right: 4%;
+				&:nth-child(2){
+					margin-right: 0;
+				}
+				@media @mobileLandscape{
+					float: none;
+					width: 100%;
+					margin-bottom: 25px;
+				}
+			}
+		}
+
 		input{
-			float:left;
-			width:48%;
+			width:100%;
 			height:60px;
-			margin-right: 4%;
 			padding:20px;
 			border: none;
 			background-color: #273a71;
 			border-radius: 4px;
 			color: @textMainColor;
+			&:focus{
+				box-shadow: 0 0 6px 1px #30bae7;
+			}
+			&.accepted{
+				&:focus{
+					box-shadow: 0 0 6px 2px #17c2a4; 
+				}
+			}
+			&.rejected{
+				&:focus{
+					box-shadow: 0 0 6px 1px #ff1919; 
+				}
+			}	
 			@media @mobileLandscape{
 				float: none;
 				width: 100%;
 				height: 40px;
-				margin-right: 0;
-				&[type="email"]{
-					margin-bottom: 25px;
-				}
+				margin-right: 0;	
 			}
-			&:nth-child(2){
-				margin-right: 0;
-			}
+			
 			&[placeholder]{
 				font: 400 18px 'Titillium Web', arial, sans-serif;	
 				@media @mobileLandscape{
@@ -1099,6 +1252,19 @@ a, a:hover{text-decoration: none;}
 			border:none;
 			border-radius: 4px;
 			color:@textMainColor;
+			&:focus{
+				box-shadow: 0 0 6px 1px #30bae7;
+			}
+			&.accepted{
+				&:focus{
+					box-shadow: 0 0 6px 1px #17c2a4; 
+				}
+			}	
+			&.rejected{
+				&:focus{
+					box-shadow: 0 0 6px 1px red; 
+				}
+			}	
 			&[placeholder]{
 				font: 400 18px/18px 'Titillium Web', arial, sans-serif;	
 				@media @mobileLandscape{

@@ -90,6 +90,17 @@ $(document).ready(function(){
     });
   });
 
+  //my slider for apps
+var srcArray = ["images/parentControl.jpg","images/antivirus.jpg","images/google-cube.jpg","images/system.jpg"];
+var count = 0;
+function sliderMy(){
+	++count;
+	if (count == 4) {count =0;}
+	$('.apps__image img').attr('src',srcArray[count]);
+}
+setInterval(sliderMy,4000);
+
+
   //slick slider 
   $('.about__wrap').slick({
   	arrows:false,
@@ -97,6 +108,7 @@ $(document).ready(function(){
   	autoplay:true,
   	cssEase: "ease-in-out"
   });
+
 
   //navigation for portrolio section;
   $('.portfolio__nav li a').on('click', function(e){
@@ -110,7 +122,26 @@ $(document).ready(function(){
   		 $(this).addClass('activeLink');
   		 $('.portfolio__wrap').removeClass('activeSection');
   		 $("#" + anchorId).addClass('activeSection');
+
+  		if($('.appBlock__title').is('.active')) {
+  			$('.appBlock__title').removeClass('active');
+  			$('.appBlock__title').removeAttr('style');
+  			$('.appBlock__title').siblings('.appBlock__content').removeAttr('style');
+  		}
 		});
+
+  // collapsible tabs for apps 
+  $('.appBlock__title').on('click', function(e){
+  	$(this).toggleClass('active');
+  	if ($(this).is('.active')) {
+  		$(this).siblings('.appBlock__content').slideDown(500);
+  	} else {
+  		$(this).siblings('.appBlock__content').slideUp(500);
+  	}
+
+  });
+
+
 });
 
 
